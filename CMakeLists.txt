@@ -49,7 +49,6 @@ target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_23)
 target_include_directories(${PROJECT_NAME}
         PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
-        PRIVATE
         ${SDL3_gfx_SOURCE_DIR}
 )
 
