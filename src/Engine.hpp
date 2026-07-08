@@ -2,14 +2,14 @@
 #include <cstdlib>
 #include <SDL3/SDL_render.h>
 
-#include "SDL3_framerate.h"
 #include "Assets.hpp"
+#include "FpsManager.hpp"
 #include "Scene.hpp"
 
 class Engine {
     SDL_Window*     m_window        = nullptr;
     SDL_Renderer*   m_renderer      = nullptr;
-    FPSmanager*     m_fpsManager    = nullptr;
+    FPSManager*     m_fpsManager    = nullptr;
     float           m_deltaTime     = 0;
 
     std::shared_ptr<Scene> m_scene;

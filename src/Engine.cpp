@@ -18,9 +18,8 @@ SDL_AppResult Engine::init(const SDL_Point& windowSize, const Uint32 fpsLimit, c
     }
     SDL_SetRenderLogicalPresentation(m_renderer, windowSize.x, windowSize.y, SDL_LOGICAL_PRESENTATION_LETTERBOX);
 
-    m_fpsManager = new FPSmanager();
-    SDL_initFramerate(m_fpsManager);
-    if (SDL_setFramerate(m_fpsManager, fpsLimit) != 0) {
+    m_fpsManager = new FPSManager();
+    if (!m_fpsManager->setFramerate(fpsLimit)) {
         SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error", "Failed to set frame rate\nUse [30-200] range", nullptr);
         return SDL_APP_FAILURE;
     }
@@ -44,7 +43,7 @@ SDL_AppResult Engine::update() {
         animation.update();
     }
 
-    m_deltaTime = static_cast<float>(SDL_framerateDelay(m_fpsManager)) / 1000;
+    m_deltaTime = static_cast<float>(m_fpsManager->framerateDelay()) / 1000;
 
     return result;
 }
