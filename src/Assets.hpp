@@ -8,8 +8,6 @@
 #include "Engine.hpp"
 #include "SDL3_image/SDL_image.h"
 
-// class Animation;
-
 class Assets {
     typedef std::unordered_map<std::string, SDL_Texture*> TextureMap;
     typedef std::unordered_map<std::string, Animation> AnimationMap;
