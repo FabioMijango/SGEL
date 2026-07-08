@@ -10,7 +10,7 @@ if(NOT SDL3_FOUND)
     FetchContent_Declare(
             SDL3
             GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
-            GIT_TAG release-3.1.3 # Usa siempre un tag estable de SDL3
+            GIT_TAG release-3.4.10
             GIT_SHALLOW ON
             EXCLUDE_FROM_ALL
     )
