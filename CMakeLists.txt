@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 4.2)
 project(SGEL VERSION 1.0)
 
 option(BUILD_SHARED_LIBS "Build SGEL as a shared library" OFF)
+option(SGEL_BUILD_EXAMPLES "Build SGEL example projects" OFF)
 
 include(FetchContent)
 
@@ -44,3 +45,7 @@ target_link_libraries(${PROJECT_NAME}
         SDL3::SDL3
         SDL3_image::SDL3_image
 )
+
+if(SGEL_BUILD_EXAMPLES)
+    add_subdirectory(example)
+endif()
