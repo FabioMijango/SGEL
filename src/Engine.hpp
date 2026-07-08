@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <SDL3/SDL_render.h>
 
-#include "SDL3_framerate.h"
 #include "Assets.hpp"
 #include "Scene.hpp"
 

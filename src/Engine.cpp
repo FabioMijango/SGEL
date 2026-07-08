@@ -1,5 +1,7 @@
 #include "Engine.hpp"
 
+#include "SDL3_framerate.h"
+
 Engine& Engine::Instance() {
     static Engine instance;
     return instance;
