@@ -52,6 +52,18 @@ Makefile
 install_manifest.txt
 compile_commands.json
 
+# CMake Build Directories
+cmake-build-*/
+cmake_build/
+out/
+
+# IDE
+.idea/
+.vscode/
+*.swo
+*~
+.DS_Store
+
 # Temporary files
 *.tmp
 *.log
