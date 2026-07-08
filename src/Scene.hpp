@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <SDL3/SDL_events.h>
 #include <SDL3/SDL_init.h>
+#include <SDL3/SDL_render.h>
 #include <SDL3/SDL_stdinc.h>
 
 #include "Action.hpp"
