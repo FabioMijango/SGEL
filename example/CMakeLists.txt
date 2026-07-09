@@ -4,3 +4,4 @@ project(SGEL_Examples)
 
 add_subdirectory(01_basic_window)
 add_subdirectory(02_assets_and_animations)
+add_subdirectory(03_inputActions)
