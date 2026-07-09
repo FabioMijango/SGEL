@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['engine_0',['engine',['../classEngine.html',1,'Engine'],['../classAssets.html#a3e1914489e4bed4f9f23cdeab34a43dc',1,'Assets::Engine']]],
+  ['engine_0',['Engine',['../classEngine.html',1,'Engine'],['../classAssets.html#a3e1914489e4bed4f9f23cdeab34a43dc',1,'Assets::Engine']]],
   ['engine_20layer_1',['SGEL - Simple Game Engine Layer',['../index.html',1,'']]],
   ['engine_2ecpp_2',['Engine.cpp',['../Engine_8cpp.html',1,'']]],
   ['engine_2ehpp_3',['Engine.hpp',['../Engine_8hpp.html',1,'']]],

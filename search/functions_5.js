@@ -7,6 +7,6 @@ var searchData=
   ['getframerate_4',['getFramerate',['../classFPSManager.html#ac024832a4403a4fa592271898e909cc6',1,'FPSManager']]],
   ['getname_5',['getName',['../classAnimation.html#a88b2acdb20e401e8552556564c12616b',1,'Animation']]],
   ['getsprite_6',['getSprite',['../classAnimation.html#abeea575ca4a5942d34587e2c2223a5a1',1,'Animation']]],
-  ['gettexture_7',['gettexture',['../classAnimation.html#a4de013f3b68f5209e848b64e3b79e4ba',1,'Animation::getTexture()'],['../classAssets.html#a3f639f1b6b48a5a18b5e880a92ac54b7',1,'Assets::getTexture(const std::string &amp;textureName) const']]],
+  ['gettexture_7',['getTexture',['../classAnimation.html#a4de013f3b68f5209e848b64e3b79e4ba',1,'Animation::getTexture()'],['../classAssets.html#a3f639f1b6b48a5a18b5e880a92ac54b7',1,'Assets::getTexture(const std::string &amp;textureName) const']]],
   ['gettexturemap_8',['getTextureMap',['../classAssets.html#a1662d8ed660e3daebbf541e6b2bb0f78',1,'Assets']]]
 ];
