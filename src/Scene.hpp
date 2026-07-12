@@ -20,21 +20,31 @@
  */
 class Scene {
 protected:
-    typedef  std::unordered_map<SDL_Scancode, std::string> ActionMap;
+    typedef std::unordered_map<InputKey, Action, InputKeyHasher> ActionMap;
 
     /// Map of SDL_Scancode keys to action names
     ActionMap   m_actionMap;
     /// Flag indicating if the scene should exit so the engine could get the next one
     bool        m_hasEnded   = false;
 
-    /**
-     * @brief Registers a keyboard key to an action name.
-     * @param key SDL_Scancode representing the keyboard key.
-     * @param action Name of the action to trigger.
-     * @note Call this in init() to set up input mappings.
-     */
-    void registerAction(const SDL_Scancode key, const std::string& action) {
-        m_actionMap[key] = action;
+    void registerAction(const SDL_Scancode scancode, const std::string& name) {
+        InputKey key{InputType::Keyboard, static_cast<Uint32>(scancode)};
+        m_actionMap[key] = Action{name, Action::State::Not_Assigned};
+    }
+
+    void registerAction(SDL_MouseButtonFlags mouseButton, const std::string& name) {
+        InputKey key{InputType::MouseButton, static_cast<Uint32>(mouseButton)};
+        m_actionMap[key] = Action{name, Action::State::Not_Assigned};
+    }
+
+    void registerAction(ScrollType scrollOrientation, const std::string& name) {
+        InputKey key{InputType::MouseWheel, static_cast<Uint32>(scrollOrientation)};
+        m_actionMap[key] = Action{name, Action::State::Not_Assigned, 0};
+    }
+
+    void registerMouseMotion(const std::string& name) {
+        InputKey key{InputType::MouseMotion, 0};
+        m_actionMap[key] = Action{name, Action::State::Not_Assigned, 0.0f, 0.0f};
     }
 
 public:
