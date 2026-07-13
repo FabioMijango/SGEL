@@ -120,14 +120,91 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('Action_8hpp.ht
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;SDL3/SDL_stdinc.h&gt;</code><br />
 </div>
 <p><a href="Action_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:InputKey" id="r_InputKey"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structInputKey.html">InputKey</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a unique input event key.  <a href="structInputKey.html#details">More...</a><br /></td></tr>
+<tr class="memitem:InputKeyHasher" id="r_InputKeyHasher"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structInputKeyHasher.html">InputKeyHasher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash function for <a class="el" href="structInputKey.html" title="Represents a unique input event key.">InputKey</a> to be used in unordered_map.  <a href="structInputKeyHasher.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Action" id="r_Action"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structAction.html">Action</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an input action triggered by keyboard events.  <a href="structAction.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an input action triggered by keyboard or mouse input, along with its current state.  <a href="structAction.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a52220c897fc33a9e88b83416bca373c6" id="r_a52220c897fc33a9e88b83416bca373c6"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a52220c897fc33a9e88b83416bca373c6">ScrollType</a> : Uint8 { <a class="el" href="#a52220c897fc33a9e88b83416bca373c6ac1b5fa03ecdb95d4a45dd1c40b02527f">Horizontal</a>
+, <a class="el" href="#a52220c897fc33a9e88b83416bca373c6a06ce2a25e5d12c166a36f654dbea6012">Vertical</a>
+ }</td></tr>
+<tr class="memdesc:a52220c897fc33a9e88b83416bca373c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the orientation of mouse wheel scrolling.  <a href="#a52220c897fc33a9e88b83416bca373c6">More...</a><br /></td></tr>
+<tr class="memitem:a288ccba5e4bb5b9abb5b4f76495e3a2f" id="r_a288ccba5e4bb5b9abb5b4f76495e3a2f"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a288ccba5e4bb5b9abb5b4f76495e3a2f">InputType</a> : Uint8 { <a class="el" href="#a288ccba5e4bb5b9abb5b4f76495e3a2fa6ce4d85a628a88bbdb3ac24a8e5a9c2e">Keyboard</a>
+, <a class="el" href="#a288ccba5e4bb5b9abb5b4f76495e3a2fa49dabe49d62a3521f7c10400138c38d5">MouseButton</a>
+, <a class="el" href="#a288ccba5e4bb5b9abb5b4f76495e3a2fa6924f81750ac471df87fed683bcea516">MouseWheel</a>
+, <a class="el" href="#a288ccba5e4bb5b9abb5b4f76495e3a2fae22334c0cac2399971712cf9ae02fa4f">MouseMotion</a>
+ }</td></tr>
+<tr class="memdesc:a288ccba5e4bb5b9abb5b4f76495e3a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the type of input event.  <a href="#a288ccba5e4bb5b9abb5b4f76495e3a2f">More...</a><br /></td></tr>
 </table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a288ccba5e4bb5b9abb5b4f76495e3a2f" name="a288ccba5e4bb5b9abb5b4f76495e3a2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288ccba5e4bb5b9abb5b4f76495e3a2f">&#9670;&#160;</a></span>InputType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a288ccba5e4bb5b9abb5b4f76495e3a2f">InputType</a> : Uint8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Represents the type of input event. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a288ccba5e4bb5b9abb5b4f76495e3a2fa6ce4d85a628a88bbdb3ac24a8e5a9c2e" name="a288ccba5e4bb5b9abb5b4f76495e3a2fa6ce4d85a628a88bbdb3ac24a8e5a9c2e"></a>Keyboard&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a288ccba5e4bb5b9abb5b4f76495e3a2fa49dabe49d62a3521f7c10400138c38d5" name="a288ccba5e4bb5b9abb5b4f76495e3a2fa49dabe49d62a3521f7c10400138c38d5"></a>MouseButton&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a288ccba5e4bb5b9abb5b4f76495e3a2fa6924f81750ac471df87fed683bcea516" name="a288ccba5e4bb5b9abb5b4f76495e3a2fa6924f81750ac471df87fed683bcea516"></a>MouseWheel&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a288ccba5e4bb5b9abb5b4f76495e3a2fae22334c0cac2399971712cf9ae02fa4f" name="a288ccba5e4bb5b9abb5b4f76495e3a2fae22334c0cac2399971712cf9ae02fa4f"></a>MouseMotion&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a52220c897fc33a9e88b83416bca373c6" name="a52220c897fc33a9e88b83416bca373c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52220c897fc33a9e88b83416bca373c6">&#9670;&#160;</a></span>ScrollType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a52220c897fc33a9e88b83416bca373c6">ScrollType</a> : Uint8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Represents the orientation of mouse wheel scrolling. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a52220c897fc33a9e88b83416bca373c6ac1b5fa03ecdb95d4a45dd1c40b02527f" name="a52220c897fc33a9e88b83416bca373c6ac1b5fa03ecdb95d4a45dd1c40b02527f"></a>Horizontal&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a52220c897fc33a9e88b83416bca373c6a06ce2a25e5d12c166a36f654dbea6012" name="a52220c897fc33a9e88b83416bca373c6a06ce2a25e5d12c166a36f654dbea6012"></a>Vertical&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

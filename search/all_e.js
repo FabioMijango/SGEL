@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['m_5factionmap_0',['m_actionMap',['../classScene.html#a4221f1cd9c7ed1b714cfee64b0391da2',1,'Scene']]],
-  ['m_5fhasended_1',['m_hasEnded',['../classScene.html#ac4ef25d90a952ae5f93e80e5fd939d03',1,'Scene']]],
-  ['m_5ftexture_2',['m_texture',['../classSprite.html#a5e2c61e824e0275975be314afeaf437e',1,'Sprite']]],
-  ['m_5ftexturerect_3',['m_textureRect',['../classSprite.html#a194034e3e18eccc756fd17b8514440c5',1,'Sprite']]],
-  ['manual_20installation_4',['Manual Installation',['../index.html#autotoc_md8',1,'']]]
+  ['layer_0',['SGEL - Simple Game Engine Layer',['../index.html',1,'']]],
+  ['library_1',['2. Compile the Library',['../index.html#autotoc_md10',1,'']]],
+  ['library_20folder_20for_20your_20project_2',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]],
+  ['loadanimation_3',['loadAnimation',['../classAssets.html#a65b178efc40efcb2bf5c682f81c3f44b',1,'Assets::loadAnimation(const std::string &amp;animationID, const std::string &amp;textureID, SDL_FRect spriteRect)'],['../classAssets.html#adbd636e74c07184ca47a0bcbf8f403e4',1,'Assets::loadAnimation(const std::string &amp;animationID, const std::string &amp;textureID, SDL_FRect animRect, Uint32 frameCount, Uint32 speed)']]],
+  ['loadfromfile_4',['loadFromFile',['../classAssets.html#a0bc45e2fee19dfd8e7fd75599d232a30',1,'Assets']]],
+  ['loadtexture_5',['loadTexture',['../classAssets.html#a77f6909d9ae9568695d7e412fd751341',1,'Assets']]]
 ];

@@ -143,23 +143,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7eb01eaa28fca5c14e22fbc1a03a12de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up scene resources before exit.  <br /></td></tr>
 <tr class="memitem:aaa780aec3a1135f20851619f12ad4a29" id="r_aaa780aec3a1135f20851619f12ad4a29"><td class="memItemLeft">virtual std::shared_ptr&lt; <a class="el" href="classScene.html">Scene</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aaa780aec3a1135f20851619f12ad4a29">changeScene</a> ()=0</td></tr>
 <tr class="memdesc:aaa780aec3a1135f20851619f12ad4a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally changes to a different scene. Called when flag m_hasEnded is true.  <br /></td></tr>
-<tr class="memitem:a201c6f29c57f78a6af5addb9fa779306" id="r_a201c6f29c57f78a6af5addb9fa779306"><td class="memItemLeft">const <a class="el" href="#a64246a384b726ebccfccc927edcbee73">ActionMap</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a201c6f29c57f78a6af5addb9fa779306">getActionMap</a> () const</td></tr>
+<tr class="memitem:a201c6f29c57f78a6af5addb9fa779306" id="r_a201c6f29c57f78a6af5addb9fa779306"><td class="memItemLeft">const <a class="el" href="#a613782e4b3b7280be529a0fc094130cb">ActionMap</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a201c6f29c57f78a6af5addb9fa779306">getActionMap</a> () const</td></tr>
 <tr class="memdesc:a201c6f29c57f78a6af5addb9fa779306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the action map.  <br /></td></tr>
 <tr class="memitem:ac6421c6df8dba50d02fdaf37538dfebf" id="r_ac6421c6df8dba50d02fdaf37538dfebf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac6421c6df8dba50d02fdaf37538dfebf">hasEnded</a> () const</td></tr>
 <tr class="memdesc:ac6421c6df8dba50d02fdaf37538dfebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the scene has ended.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-types" class="groupheader"><a id="pro-types" name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr class="memitem:a64246a384b726ebccfccc927edcbee73" id="r_a64246a384b726ebccfccc927edcbee73"><td class="memItemLeft">typedef std::unordered_map&lt; SDL_Scancode, std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a64246a384b726ebccfccc927edcbee73">ActionMap</a></td></tr>
+<tr class="memitem:a613782e4b3b7280be529a0fc094130cb" id="r_a613782e4b3b7280be529a0fc094130cb"><td class="memItemLeft">typedef std::unordered_map&lt; <a class="el" href="structInputKey.html">InputKey</a>, <a class="el" href="structAction.html">Action</a>, <a class="el" href="structInputKeyHasher.html">InputKeyHasher</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a613782e4b3b7280be529a0fc094130cb">ActionMap</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a47b6ea25f77be959978f142671bc34fb" id="r_a47b6ea25f77be959978f142671bc34fb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a47b6ea25f77be959978f142671bc34fb">registerAction</a> (const SDL_Scancode key, const std::string &amp;action)</td></tr>
-<tr class="memdesc:a47b6ea25f77be959978f142671bc34fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a keyboard key to an action name.  <br /></td></tr>
+<tr class="memitem:a25342f544c522ce6926648922fd390c2" id="r_a25342f544c522ce6926648922fd390c2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a25342f544c522ce6926648922fd390c2">registerAction</a> (const SDL_Scancode scancode, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a25342f544c522ce6926648922fd390c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an action for a keyboard key.  <br /></td></tr>
+<tr class="memitem:abbc3f2c99f092bfe13724d54ed86eff2" id="r_abbc3f2c99f092bfe13724d54ed86eff2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abbc3f2c99f092bfe13724d54ed86eff2">registerAction</a> (SDL_MouseButtonFlags mouseButton, const std::string &amp;name)</td></tr>
+<tr class="memdesc:abbc3f2c99f092bfe13724d54ed86eff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an action for a mouse button.  <br /></td></tr>
+<tr class="memitem:af3085eee4e68a3b5809509a75eb432fd" id="r_af3085eee4e68a3b5809509a75eb432fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af3085eee4e68a3b5809509a75eb432fd">registerAction</a> (<a class="el" href="Action_8hpp.html#a52220c897fc33a9e88b83416bca373c6">ScrollType</a> scrollOrientation, const std::string &amp;name)</td></tr>
+<tr class="memdesc:af3085eee4e68a3b5809509a75eb432fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an action for mouse wheel scrolling.  <br /></td></tr>
+<tr class="memitem:ac55778c65d92d03389a2b1f60a8f3fd2" id="r_ac55778c65d92d03389a2b1f60a8f3fd2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac55778c65d92d03389a2b1f60a8f3fd2">registerMouseMotion</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:ac55778c65d92d03389a2b1f60a8f3fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an action for mouse motion.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a4221f1cd9c7ed1b714cfee64b0391da2" id="r_a4221f1cd9c7ed1b714cfee64b0391da2"><td class="memItemLeft"><a class="el" href="#a64246a384b726ebccfccc927edcbee73">ActionMap</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4221f1cd9c7ed1b714cfee64b0391da2">m_actionMap</a></td></tr>
+<tr class="memitem:a4221f1cd9c7ed1b714cfee64b0391da2" id="r_a4221f1cd9c7ed1b714cfee64b0391da2"><td class="memItemLeft"><a class="el" href="#a613782e4b3b7280be529a0fc094130cb">ActionMap</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4221f1cd9c7ed1b714cfee64b0391da2">m_actionMap</a></td></tr>
 <tr class="memdesc:a4221f1cd9c7ed1b714cfee64b0391da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of SDL_Scancode keys to action names.  <br /></td></tr>
 <tr class="memitem:ac4ef25d90a952ae5f93e80e5fd939d03" id="r_ac4ef25d90a952ae5f93e80e5fd939d03"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac4ef25d90a952ae5f93e80e5fd939d03">m_hasEnded</a> = false</td></tr>
 <tr class="memdesc:ac4ef25d90a952ae5f93e80e5fd939d03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating if the scene should exit so the engine could get the next one.  <br /></td></tr>
@@ -167,10 +173,10 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for game scenes. </p>
 <p>Provides the interface for implementing game states/screens. Scenes handle initialization, updates, rendering, input, and exit logic. Supports action mapping from keyboard input.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classEngine.html" title="Main engine class managing SDL systems, scenes, and the main game loop.">Engine</a>, <a class="el" href="structAction.html" title="Represents an input action triggered by keyboard events.">Action</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classEngine.html" title="Main engine class managing SDL systems, scenes, and the main game loop.">Engine</a>, <a class="el" href="structAction.html" title="Represents an input action triggered by keyboard or mouse input, along with its current state.">Action</a> </dd></dl>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a64246a384b726ebccfccc927edcbee73" name="a64246a384b726ebccfccc927edcbee73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64246a384b726ebccfccc927edcbee73">&#9670;&#160;</a></span>ActionMap</h2>
+<a id="a613782e4b3b7280be529a0fc094130cb" name="a613782e4b3b7280be529a0fc094130cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a613782e4b3b7280be529a0fc094130cb">&#9670;&#160;</a></span>ActionMap</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +185,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::unordered_map&lt;SDL_Scancode, std::string&gt; <a class="el" href="#a64246a384b726ebccfccc927edcbee73">Scene::ActionMap</a></td>
+          <td class="memname">typedef std::unordered_map&lt;<a class="el" href="structInputKey.html">InputKey</a>, <a class="el" href="structAction.html">Action</a>, <a class="el" href="structInputKeyHasher.html">InputKeyHasher</a>&gt; <a class="el" href="#a613782e4b3b7280be529a0fc094130cb">Scene::ActionMap</a></td>
         </tr>
       </table>
   </td>
@@ -343,7 +349,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="#a64246a384b726ebccfccc927edcbee73">ActionMap</a> &amp; Scene::getActionMap </td>
+          <td class="memname">const <a class="el" href="#a613782e4b3b7280be529a0fc094130cb">ActionMap</a> &amp; Scene::getActionMap </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -417,8 +423,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a47b6ea25f77be959978f142671bc34fb" name="a47b6ea25f77be959978f142671bc34fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47b6ea25f77be959978f142671bc34fb">&#9670;&#160;</a></span>registerAction()</h2>
+<a id="a25342f544c522ce6926648922fd390c2" name="a25342f544c522ce6926648922fd390c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25342f544c522ce6926648922fd390c2">&#9670;&#160;</a></span>registerAction() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -429,12 +435,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Scene::registerAction </td>
           <td>(</td>
-          <td class="paramtype">const SDL_Scancode</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+          <td class="paramtype">const SDL_Scancode</td>          <td class="paramname"><span class="paramname"><em>scancode</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -444,15 +450,124 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Registers a keyboard key to an action name. </p>
+<p>Registers an action for a keyboard key. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key</td><td>SDL_Scancode representing the keyboard key. </td></tr>
-    <tr><td class="paramname">action</td><td>Name of the action to trigger. </td></tr>
+    <tr><td class="paramname">scancode</td><td>SDL_Scancode for the key. </td></tr>
+    <tr><td class="paramname">name</td><td>Name of the action. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Call this in <a class="el" href="#ac3721d8623a3d272ca69619fe914b522" title="Initializes the scene.">init()</a> to set up input mappings. </dd></dl>
+
+</div>
+</div>
+<a id="af3085eee4e68a3b5809509a75eb432fd" name="af3085eee4e68a3b5809509a75eb432fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3085eee4e68a3b5809509a75eb432fd">&#9670;&#160;</a></span>registerAction() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::registerAction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="Action_8hpp.html#a52220c897fc33a9e88b83416bca373c6">ScrollType</a></td>          <td class="paramname"><span class="paramname"><em>scrollOrientation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers an action for mouse wheel scrolling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scrollOrientation</td><td><a class="el" href="Action_8hpp.html#a52220c897fc33a9e88b83416bca373c6" title="Represents the orientation of mouse wheel scrolling.">ScrollType</a> indicating the orientation. </td></tr>
+    <tr><td class="paramname">name</td><td>Name of the action. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abbc3f2c99f092bfe13724d54ed86eff2" name="abbc3f2c99f092bfe13724d54ed86eff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc3f2c99f092bfe13724d54ed86eff2">&#9670;&#160;</a></span>registerAction() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::registerAction </td>
+          <td>(</td>
+          <td class="paramtype">SDL_MouseButtonFlags</td>          <td class="paramname"><span class="paramname"><em>mouseButton</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers an action for a mouse button. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseButton</td><td>SDL_MouseButtonFlags for the button. </td></tr>
+    <tr><td class="paramname">name</td><td>Name of the action. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac55778c65d92d03389a2b1f60a8f3fd2" name="ac55778c65d92d03389a2b1f60a8f3fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac55778c65d92d03389a2b1f60a8f3fd2">&#9670;&#160;</a></span>registerMouseMotion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::registerMouseMotion </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers an action for mouse motion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the action. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Register actions for mouse buttons also retrieves X and Y coordinates when triggered, consider only registering mouse motion if you need to track mouse movement. </dd></dl>
 
 </div>
 </div>
@@ -482,7 +597,7 @@ Protected Attributes</h2></td></tr>
 <p>Processes an action triggered by input. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">action</td><td><a class="el" href="structAction.html" title="Represents an input action triggered by keyboard events.">Action</a> containing name and state (pressed/released). </td></tr>
+    <tr><td class="paramname">action</td><td><a class="el" href="structAction.html" title="Represents an input action triggered by keyboard or mouse input, along with its current state.">Action</a> containing name and state (pressed/released). </td></tr>
   </table>
   </dd>
 </dl>
@@ -567,7 +682,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a64246a384b726ebccfccc927edcbee73">ActionMap</a> Scene::m_actionMap</td>
+          <td class="memname"><a class="el" href="#a613782e4b3b7280be529a0fc094130cb">ActionMap</a> Scene::m_actionMap</td>
         </tr>
       </table>
   </td>

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pressed_0',['Pressed',['../structAction.html#a1a3c931bd390ce73d234be2e57b4b8f5ad78a68f6a85421ae121c2cb5b73a1040',1,'Action']]],
-  ['project_1',['2. Build Your Project',['../index.html#autotoc_md7',1,'']]],
-  ['project_2',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]]
+  ['name_0',['name',['../structAction.html#a94f19f635403e601f020ee971b5f78bf',1,'Action']]],
+  ['not_5fassigned_1',['Not_Assigned',['../structAction.html#a1a3c931bd390ce73d234be2e57b4b8f5a76611148bc58972881cce7e2de303e9c',1,'Action']]]
 ];

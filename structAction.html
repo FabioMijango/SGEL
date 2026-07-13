@@ -120,18 +120,24 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structAction.h
 </div><!--header-->
 <div class="contents">
 
-<p>Represents an input action triggered by keyboard events.  
+<p>Represents an input action triggered by keyboard or mouse input, along with its current state.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Action_8hpp_source.html">Action.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a1a3c931bd390ce73d234be2e57b4b8f5" id="r_a1a3c931bd390ce73d234be2e57b4b8f5"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5">State</a> { <a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5ad78a68f6a85421ae121c2cb5b73a1040">Pressed</a>
+<tr class="memitem:a1a3c931bd390ce73d234be2e57b4b8f5" id="r_a1a3c931bd390ce73d234be2e57b4b8f5"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5">State</a> { <br />
+&#160;&#160;<a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5ad78a68f6a85421ae121c2cb5b73a1040">Pressed</a>
 , <a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5aea1e34304a5d8ffa7c9b0ed8ede4ef1a">Released</a>
+, <a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5a7ff658fe320a6293eb4443a521101f27">Horizontal_Scroll</a>
+, <a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5aa892fdfe8d4675c16640248546ae615c">Vertical_Scroll</a>
+, <br />
+&#160;&#160;<a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5add5fbc94d3b7bf6b85a9eb531226316c">Mouse_Motion</a>
 , <a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5a76611148bc58972881cce7e2de303e9c">Not_Assigned</a>
+<br />
  }</td></tr>
-<tr class="memdesc:a1a3c931bd390ce73d234be2e57b4b8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAction.html" title="Represents an input action triggered by keyboard events.">Action</a> state enumeration.  <a href="#a1a3c931bd390ce73d234be2e57b4b8f5">More...</a><br /></td></tr>
+<tr class="memdesc:a1a3c931bd390ce73d234be2e57b4b8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAction.html" title="Represents an input action triggered by keyboard or mouse input, along with its current state.">Action</a> state enumeration.  <a href="#a1a3c931bd390ce73d234be2e57b4b8f5">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -139,11 +145,15 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a94f19f635403e601f020ee971b5f78bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name/identifier of the action.  <br /></td></tr>
 <tr class="memitem:a2d37d5f19427c816427500d0669c4003" id="r_a2d37d5f19427c816427500d0669c4003"><td class="memItemLeft"><a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5">State</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2d37d5f19427c816427500d0669c4003">state</a> = <a class="el" href="#a1a3c931bd390ce73d234be2e57b4b8f5a76611148bc58972881cce7e2de303e9c">State::Not_Assigned</a></td></tr>
 <tr class="memdesc:a2d37d5f19427c816427500d0669c4003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current state of the action.  <br /></td></tr>
+<tr class="memitem:adda1e065dda853137ba0b6ac1e06be75" id="r_adda1e065dda853137ba0b6ac1e06be75"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#adda1e065dda853137ba0b6ac1e06be75">x</a> = 0.0f</td></tr>
+<tr class="memdesc:adda1e065dda853137ba0b6ac1e06be75"><td class="mdescLeft">&#160;</td><td class="mdescRight">X value, used for mouse position and horizontal scroll.  <br /></td></tr>
+<tr class="memitem:a31e39b0f071cdccc90a046cb7fef53e4" id="r_a31e39b0f071cdccc90a046cb7fef53e4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a31e39b0f071cdccc90a046cb7fef53e4">y</a> = 0.0f</td></tr>
+<tr class="memdesc:a31e39b0f071cdccc90a046cb7fef53e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y value, used for mouse position and vertical scroll.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents an input action triggered by keyboard events. </p>
-<p>Encapsulates an action name with its current state (pressed, released, or unassigned). Used by scenes to process player input mapped to game actions.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classScene.html" title="Abstract base class for game scenes.">Scene</a> </dd></dl>
+<div class="textblock"><p>Represents an input action triggered by keyboard or mouse input, along with its current state. </p>
+<p>Encapsulates an action with its current state (pressed, scroll, mouse motion, etc.). Used by scenes to process player input mapped to game actions.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classScene.html" title="Abstract base class for game scenes.">Scene</a>, <a class="el" href="structInputKey.html" title="Represents a unique input event key.">InputKey</a>, <a class="el" href="Action_8hpp.html#a52220c897fc33a9e88b83416bca373c6" title="Represents the orientation of mouse wheel scrolling.">ScrollType</a>, <a class="el" href="Action_8hpp.html#a288ccba5e4bb5b9abb5b4f76495e3a2f" title="Represents the type of input event.">InputType</a> </dd></dl>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="a1a3c931bd390ce73d234be2e57b4b8f5" name="a1a3c931bd390ce73d234be2e57b4b8f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a3c931bd390ce73d234be2e57b4b8f5">&#9670;&#160;</a></span>State</h2>
@@ -165,13 +175,19 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="structAction.html" title="Represents an input action triggered by keyboard events.">Action</a> state enumeration. </p>
+<p><a class="el" href="structAction.html" title="Represents an input action triggered by keyboard or mouse input, along with its current state.">Action</a> state enumeration. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1a3c931bd390ce73d234be2e57b4b8f5ad78a68f6a85421ae121c2cb5b73a1040" name="a1a3c931bd390ce73d234be2e57b4b8f5ad78a68f6a85421ae121c2cb5b73a1040"></a>Pressed&#160;</td><td class="fielddoc"><p>Key is currently held down. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1a3c931bd390ce73d234be2e57b4b8f5aea1e34304a5d8ffa7c9b0ed8ede4ef1a" name="a1a3c931bd390ce73d234be2e57b4b8f5aea1e34304a5d8ffa7c9b0ed8ede4ef1a"></a>Released&#160;</td><td class="fielddoc"><p>Key was just released. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a1a3c931bd390ce73d234be2e57b4b8f5a76611148bc58972881cce7e2de303e9c" name="a1a3c931bd390ce73d234be2e57b4b8f5a76611148bc58972881cce7e2de303e9c"></a>Not_Assigned&#160;</td><td class="fielddoc"><p><a class="el" href="structAction.html" title="Represents an input action triggered by keyboard events.">Action</a> not yet assigned. </p>
+<tr><td class="fieldname"><a id="a1a3c931bd390ce73d234be2e57b4b8f5a7ff658fe320a6293eb4443a521101f27" name="a1a3c931bd390ce73d234be2e57b4b8f5a7ff658fe320a6293eb4443a521101f27"></a>Horizontal_Scroll&#160;</td><td class="fielddoc"><p>Mouse wheel scrolled horizontally. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1a3c931bd390ce73d234be2e57b4b8f5aa892fdfe8d4675c16640248546ae615c" name="a1a3c931bd390ce73d234be2e57b4b8f5aa892fdfe8d4675c16640248546ae615c"></a>Vertical_Scroll&#160;</td><td class="fielddoc"><p>Mouse wheel scrolled vertically. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1a3c931bd390ce73d234be2e57b4b8f5add5fbc94d3b7bf6b85a9eb531226316c" name="a1a3c931bd390ce73d234be2e57b4b8f5add5fbc94d3b7bf6b85a9eb531226316c"></a>Mouse_Motion&#160;</td><td class="fielddoc"><p>Mouse motion event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1a3c931bd390ce73d234be2e57b4b8f5a76611148bc58972881cce7e2de303e9c" name="a1a3c931bd390ce73d234be2e57b4b8f5a76611148bc58972881cce7e2de303e9c"></a>Not_Assigned&#160;</td><td class="fielddoc"><p><a class="el" href="structAction.html" title="Represents an input action triggered by keyboard or mouse input, along with its current state.">Action</a> not yet assigned. </p>
 </td></tr>
 </table>
 
@@ -207,6 +223,38 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Current state of the action. </p>
+
+</div>
+</div>
+<a id="adda1e065dda853137ba0b6ac1e06be75" name="adda1e065dda853137ba0b6ac1e06be75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda1e065dda853137ba0b6ac1e06be75">&#9670;&#160;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Action::x = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>X value, used for mouse position and horizontal scroll. </p>
+
+</div>
+</div>
+<a id="a31e39b0f071cdccc90a046cb7fef53e4" name="a31e39b0f071cdccc90a046cb7fef53e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e39b0f071cdccc90a046cb7fef53e4">&#9670;&#160;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Action::y = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Y value, used for mouse position and vertical scroll. </p>
 
 </div>
 </div>

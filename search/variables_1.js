@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../structAction.html#a94f19f635403e601f020ee971b5f78bf',1,'Action']]]
+  ['code_0',['code',['../structInputKey.html#adb2d9d2e148d00fd17e2a8e502fe6d6f',1,'InputKey']]]
 ];
