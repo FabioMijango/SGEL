@@ -112,9 +112,18 @@ public:
         return e < m_sparse.size() && m_sparse[e] != INVALID;
     }
 
+    /**
+     * @brief Returns a reference to the dense array of components.
+     * @return Reference to the vector of components.
+     */
     std::vector<Component>&   getComponents() {
         return m_denseComponents;
     }
+
+    /**
+     * @brief Returns a reference to the dense array of entity keys.
+     * @return Reference to the vector of entity keys.
+     */
     std::vector<Entity>&      getKeys() {
         return m_denseKeys;
     }
