@@ -12,7 +12,6 @@ concept ComponentConcept = std::is_class_v<T> && std::is_standard_layout_v<T>;
 struct TransformComponent {
     SDL_FPoint position { 0.0f, 0.0f };
     SDL_FPoint scale { 1.0f, 1.0f };
-    float rotation { 0.0f };
 };
 
 struct KinematicComponent {
@@ -27,6 +26,13 @@ struct BoxColliderComponent {
 
     // Uint32 collisionLayer { 0 };
     // Uint32 collisionMask { 0 };
+};
+
+struct CameraComponent {
+    SDL_FPoint position { 0.0f, 0.0f };
+    float zoom { 1.0f };
+
+    SDL_FPoint viewport { 0.0f, 0.0f };
 };
 
 struct TimeComponent {
