@@ -57,15 +57,41 @@ SDL_AppResult Engine::sUserInput(const SDL_Event* event) const {
         return SDL_APP_SUCCESS;
     }
 
-    if (event->type == SDL_EVENT_KEY_DOWN || event->type == SDL_EVENT_KEY_UP) {
-        const auto& sceneActionMap = m_scene->getActionMap();
-        if (const auto it = sceneActionMap.find(event->key.scancode); it != sceneActionMap.end()) {
+    const auto& sceneActionMap = m_scene->getActionMap();
 
-            const Action::State actionState = event->type == SDL_EVENT_KEY_DOWN ? Action::State::Pressed : Action::State::Released;
-            const Action action = {it->second, actionState};
-
-            m_scene->sDoAction(action);
+    auto dispatchAction = [&](InputKey key, Action::State state, float x = 0.0f, float y = 0.0f) {
+        if (auto it = sceneActionMap.find(key); it != sceneActionMap.end()) {
+            Action triggeredAction = it->second;
+            triggeredAction.state = state;
+            triggeredAction.x = x;
+            triggeredAction.y = y;
+            m_scene->sDoAction(triggeredAction);
         }
+    };
+
+    if (event->type == SDL_EVENT_MOUSE_MOTION) {
+        InputKey searchKey = { InputType::MouseMotion, 0 };
+        dispatchAction(searchKey, Action::State::Mouse_Motion, event->motion.x, event->motion.y);
+    }
+    else if (event->type == SDL_EVENT_KEY_DOWN || event->type == SDL_EVENT_KEY_UP) {
+        if (event->key.repeat) return SDL_APP_CONTINUE;
+
+        InputKey searchKey = { InputType::Keyboard, static_cast<Uint32>(event->key.scancode) };
+        auto newState = (event->type == SDL_EVENT_KEY_DOWN) ? Action::State::Pressed : Action::State::Released;
+
+        dispatchAction(searchKey, newState);
+    }
+    else if (event->type == SDL_EVENT_MOUSE_BUTTON_DOWN || event->type == SDL_EVENT_MOUSE_BUTTON_UP) {
+        InputKey searchKey = { InputType::MouseButton, static_cast<Uint32>(event->button.button) };
+        auto newState = (event->type == SDL_EVENT_MOUSE_BUTTON_DOWN) ? Action::State::Pressed : Action::State::Released;
+
+        dispatchAction(searchKey, newState, event->button.x, event->button.y);
+    }
+    else if (event->type == SDL_EVENT_MOUSE_WHEEL) {
+        auto scrollType = event->wheel.y != 0 ? ScrollType::Vertical : ScrollType::Horizontal;
+        auto scrollState = event->wheel.y != 0 ? Action::State::Vertical_Scroll : Action::State::Horizontal_Scroll;
+        InputKey key = { InputType::MouseWheel, static_cast<Uint32>(scrollType) };
+        dispatchAction( key, scrollState, event->wheel.integer_x, event->wheel.integer_y);
     }
 
     auto result = m_scene->eventHandler(event);

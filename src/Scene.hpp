@@ -20,7 +20,7 @@
  */
 class Scene {
 protected:
-    typedef  std::unordered_map<SDL_Scancode, std::string> ActionMap;
+    typedef std::unordered_map<InputKey, Action, InputKeyHasher> ActionMap;
 
     /// Map of SDL_Scancode keys to action names
     ActionMap   m_actionMap;
@@ -28,13 +28,44 @@ protected:
     bool        m_hasEnded   = false;
 
     /**
-     * @brief Registers a keyboard key to an action name.
-     * @param key SDL_Scancode representing the keyboard key.
-     * @param action Name of the action to trigger.
-     * @note Call this in init() to set up input mappings.
+     * @brief Registers an action for a keyboard key.
+     * @param scancode SDL_Scancode for the key.
+     * @param name Name of the action.
      */
-    void registerAction(const SDL_Scancode key, const std::string& action) {
-        m_actionMap[key] = action;
+    void registerAction(const SDL_Scancode scancode, const std::string& name) {
+        InputKey key{InputType::Keyboard, static_cast<Uint32>(scancode)};
+        m_actionMap[key] = Action{name, Action::State::Not_Assigned};
+    }
+
+    /**
+     * @brief Registers an action for a mouse button.
+     * @param mouseButton SDL_MouseButtonFlags for the button.
+     * @param name Name of the action.
+     */
+    void registerAction(SDL_MouseButtonFlags mouseButton, const std::string& name) {
+        InputKey key{InputType::MouseButton, static_cast<Uint32>(mouseButton)};
+        m_actionMap[key] = Action{name, Action::State::Not_Assigned};
+    }
+
+    /**
+     * @brief Registers an action for mouse wheel scrolling.
+     * @param scrollOrientation ScrollType indicating the orientation.
+     * @param name Name of the action.
+     */
+    void registerAction(ScrollType scrollOrientation, const std::string& name) {
+        InputKey key{InputType::MouseWheel, static_cast<Uint32>(scrollOrientation)};
+        m_actionMap[key] = Action{name, Action::State::Not_Assigned, 0};
+    }
+
+    /**
+     * @brief Registers an action for mouse motion.
+     * @param name Name of the action.
+     * @note Register actions for mouse buttons also retrieves X and Y coordinates when
+     * triggered, consider only registering mouse motion if you need to track mouse movement.
+     */
+    void registerMouseMotion(const std::string& name) {
+        InputKey key{InputType::MouseMotion, 0};
+        m_actionMap[key] = Action{name, Action::State::Not_Assigned, 0.0f, 0.0f};
     }
 
 public:
