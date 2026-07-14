@@ -78,14 +78,20 @@ Simple example that creates a window
 ### 2. Assets and Animations (`02_assets_and_animations`)
 Show how to load assets and create animations.
 
-### 3. Input Actions (`03_inputActions`)
+### 3. Input Actions (`03_input_actions`)
 Show how to map and use input actions.
+
+### 4. Entity Management (`04_managing_entities`)
+Show how to create and manage entities.
+
+### 5. Camera system (`05_camera_system`)
+Show how to use the camera system.
 
 ---
 ## Roadmap
 
-- [ ] Physics engine integration
+- [ ] World management (Collisions and camera rendering)
 - [ ] Font support (SDL_ttf)
 - [ ] Audio support (SDL_mixer)
-- [ ] Documentation and tutorials
+- [ ] Documentation and tutorials (Halfway done)
 
