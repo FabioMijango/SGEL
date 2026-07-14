@@ -4,6 +4,7 @@ var annotated_dup =
     [ "Animation", "classAnimation.html", "classAnimation" ],
     [ "Assets", "classAssets.html", "classAssets" ],
     [ "BoxColliderComponent", "structBoxColliderComponent.html", "structBoxColliderComponent" ],
+    [ "CameraComponent", "structCameraComponent.html", "structCameraComponent" ],
     [ "Engine", "classEngine.html", "classEngine" ],
     [ "EntityManager", "classEntityManager.html", "classEntityManager" ],
     [ "FPSManager", "classFPSManager.html", "classFPSManager" ],

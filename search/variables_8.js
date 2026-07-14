@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['scale_0',['scale',['../structTransformComponent.html#a63180cf6df8383e00e7ff2c74755fa68',1,'TransformComponent']]],
-  ['state_1',['state',['../structAction.html#a2d37d5f19427c816427500d0669c4003',1,'Action']]]
+  ['timestamp_0',['timestamp',['../structTimeComponent.html#aeb6d2ff4997c2623d965d3dcaa2e32e9',1,'TimeComponent']]],
+  ['type_1',['type',['../structInputKey.html#afbfc5ccf3eb0c46b288d8ed6af5781c5',1,'InputKey']]]
 ];

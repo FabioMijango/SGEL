@@ -146,7 +146,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a62c2bea416fdb64e4c42015e65c5d0ea" id="r_a62c2bea416fdb64e4c42015e65c5d0ea"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a62c2bea416fdb64e4c42015e65c5d0ea">hasComponent</a> (<a class="el" href="Types_8hpp.html#ad3dfdc50ab5559bc5c131f83e27d7d7d">Entity</a> e) const</td></tr>
 <tr class="memdesc:a62c2bea416fdb64e4c42015e65c5d0ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given entity has a component.  <br /></td></tr>
 <tr class="memitem:a3bfd83358a025fb65f9649a0a6baff73" id="r_a3bfd83358a025fb65f9649a0a6baff73"><td class="memItemLeft">std::vector&lt; Component &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3bfd83358a025fb65f9649a0a6baff73">getComponents</a> ()</td></tr>
+<tr class="memdesc:a3bfd83358a025fb65f9649a0a6baff73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the dense array of components.  <br /></td></tr>
 <tr class="memitem:a6d7af640bb6e0d75584ad5a036fe5861" id="r_a6d7af640bb6e0d75584ad5a036fe5861"><td class="memItemLeft">std::vector&lt; <a class="el" href="Types_8hpp.html#ad3dfdc50ab5559bc5c131f83e27d7d7d">Entity</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6d7af640bb6e0d75584ad5a036fe5861">getKeys</a> ()</td></tr>
+<tr class="memdesc:a6d7af640bb6e0d75584ad5a036fe5861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the dense array of entity keys.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classISparseSet"><td colspan="2">Public Member Functions inherited from <a class="el" href="classISparseSet.html">ISparseSet</a></td></tr>
 <tr class="memitem:a2d5457a62c4a423120ae5906982338ec pub_methods_classISparseSet" id="r_a2d5457a62c4a423120ae5906982338ec"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classISparseSet.html#a2d5457a62c4a423120ae5906982338ec">~ISparseSet</a> ()=default</td></tr>
 </table>
@@ -290,6 +292,9 @@ template&lt;<a class="el" href="conceptComponentConcept.html">ComponentConcept</
 </table>
 </div><div class="memdoc">
 
+<p>Returns a reference to the dense array of components. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the vector of components. </dd></dl>
+
 </div>
 </div>
 <a id="a6d7af640bb6e0d75584ad5a036fe5861" name="a6d7af640bb6e0d75584ad5a036fe5861"></a>
@@ -316,6 +321,9 @@ template&lt;<a class="el" href="conceptComponentConcept.html">ComponentConcept</
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns a reference to the dense array of entity keys. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the vector of entity keys. </dd></dl>
 
 </div>
 </div>

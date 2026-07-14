@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['velocity_0',['velocity',['../structKinematicComponent.html#a5ceddefaa835ebffdc2268ffab7ec925',1,'KinematicComponent']]]
+  ['width_0',['width',['../structBoxColliderComponent.html#aced958388f731f139b9898cb16c92843',1,'BoxColliderComponent']]]
 ];

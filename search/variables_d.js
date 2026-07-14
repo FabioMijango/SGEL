@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../structAction.html#a31e39b0f071cdccc90a046cb7fef53e4',1,'Action']]]
+  ['zoom_0',['zoom',['../structCameraComponent.html#a4eb1888f21f86a7ab3f33c5529093b32',1,'CameraComponent']]]
 ];

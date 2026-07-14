@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['width_0',['width',['../structBoxColliderComponent.html#aced958388f731f139b9898cb16c92843',1,'BoxColliderComponent']]]
+  ['x_0',['x',['../structAction.html#adda1e065dda853137ba0b6ac1e06be75',1,'Action']]]
 ];

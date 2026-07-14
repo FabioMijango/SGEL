@@ -211,18 +211,19 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('SparseSet_8hpp
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span> e &lt; m_sparse.size() &amp;&amp; m_sparse[e] != INVALID;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
 </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classSparseSet.html#a3bfd83358a025fb65f9649a0a6baff73">  115</a></span>    std::vector&lt;Component&gt;&amp;   <a class="code hl_function" href="classSparseSet.html#a3bfd83358a025fb65f9649a0a6baff73">getComponents</a>() {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">return</span> m_denseComponents;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classSparseSet.html#a3bfd83358a025fb65f9649a0a6baff73">  119</a></span>    std::vector&lt;Component&gt;&amp;   <a class="code hl_function" href="classSparseSet.html#a3bfd83358a025fb65f9649a0a6baff73">getComponents</a>() {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">return</span> m_denseComponents;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
 </div>
-<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classSparseSet.html#a6d7af640bb6e0d75584ad5a036fe5861">  118</a></span>    std::vector&lt;Entity&gt;&amp;      <a class="code hl_function" href="classSparseSet.html#a6d7af640bb6e0d75584ad5a036fe5861">getKeys</a>() {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> m_denseKeys;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classSparseSet.html#a6d7af640bb6e0d75584ad5a036fe5861">  127</a></span>    std::vector&lt;Entity&gt;&amp;      <a class="code hl_function" href="classSparseSet.html#a6d7af640bb6e0d75584ad5a036fe5861">getKeys</a>() {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">return</span> m_denseKeys;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
 </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>};</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
 </div>
 <div class="ttc" id="aTypes_8hpp_html"><div class="ttname"><a href="Types_8hpp.html">Types.hpp</a></div></div>
 <div class="ttc" id="aTypes_8hpp_html_ad3dfdc50ab5559bc5c131f83e27d7d7d"><div class="ttname"><a href="Types_8hpp.html#ad3dfdc50ab5559bc5c131f83e27d7d7d">Entity</a></div><div class="ttdeci">Uint32 Entity</div><div class="ttdef"><b>Definition</b> Types.hpp:7</div></div>
@@ -231,9 +232,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('SparseSet_8hpp
 <div class="ttc" id="aclassISparseSet_html_afcd5a07a0b4966e1a9a6db57d30f1473"><div class="ttname"><a href="classISparseSet.html#afcd5a07a0b4966e1a9a6db57d30f1473">ISparseSet::removeComponent</a></div><div class="ttdeci">virtual void removeComponent(Entity e)=0</div></div>
 <div class="ttc" id="aclassSparseSet_html_a072d78fee6d7ac8959fdd2c1f1db1993"><div class="ttname"><a href="classSparseSet.html#a072d78fee6d7ac8959fdd2c1f1db1993">SparseSet::addComponent</a></div><div class="ttdeci">Component * addComponent(Entity e, const Component &amp;component)</div><div class="ttdoc">Adds a component for the given entity.</div><div class="ttdef"><b>Definition</b> SparseSet.hpp:45</div></div>
 <div class="ttc" id="aclassSparseSet_html_a15bae3e2e47b00f8725f86ea111d6d90"><div class="ttname"><a href="classSparseSet.html#a15bae3e2e47b00f8725f86ea111d6d90">SparseSet::SparseSet</a></div><div class="ttdeci">SparseSet()=default</div></div>
-<div class="ttc" id="aclassSparseSet_html_a3bfd83358a025fb65f9649a0a6baff73"><div class="ttname"><a href="classSparseSet.html#a3bfd83358a025fb65f9649a0a6baff73">SparseSet::getComponents</a></div><div class="ttdeci">std::vector&lt; Component &gt; &amp; getComponents()</div><div class="ttdef"><b>Definition</b> SparseSet.hpp:115</div></div>
+<div class="ttc" id="aclassSparseSet_html_a3bfd83358a025fb65f9649a0a6baff73"><div class="ttname"><a href="classSparseSet.html#a3bfd83358a025fb65f9649a0a6baff73">SparseSet::getComponents</a></div><div class="ttdeci">std::vector&lt; Component &gt; &amp; getComponents()</div><div class="ttdoc">Returns a reference to the dense array of components.</div><div class="ttdef"><b>Definition</b> SparseSet.hpp:119</div></div>
 <div class="ttc" id="aclassSparseSet_html_a62c2bea416fdb64e4c42015e65c5d0ea"><div class="ttname"><a href="classSparseSet.html#a62c2bea416fdb64e4c42015e65c5d0ea">SparseSet::hasComponent</a></div><div class="ttdeci">bool hasComponent(Entity e) const</div><div class="ttdoc">Checks if the given entity has a component.</div><div class="ttdef"><b>Definition</b> SparseSet.hpp:111</div></div>
-<div class="ttc" id="aclassSparseSet_html_a6d7af640bb6e0d75584ad5a036fe5861"><div class="ttname"><a href="classSparseSet.html#a6d7af640bb6e0d75584ad5a036fe5861">SparseSet::getKeys</a></div><div class="ttdeci">std::vector&lt; Entity &gt; &amp; getKeys()</div><div class="ttdef"><b>Definition</b> SparseSet.hpp:118</div></div>
+<div class="ttc" id="aclassSparseSet_html_a6d7af640bb6e0d75584ad5a036fe5861"><div class="ttname"><a href="classSparseSet.html#a6d7af640bb6e0d75584ad5a036fe5861">SparseSet::getKeys</a></div><div class="ttdeci">std::vector&lt; Entity &gt; &amp; getKeys()</div><div class="ttdoc">Returns a reference to the dense array of entity keys.</div><div class="ttdef"><b>Definition</b> SparseSet.hpp:127</div></div>
 <div class="ttc" id="aclassSparseSet_html_a9f7555e69291a2d466a77a09422ac1f5"><div class="ttname"><a href="classSparseSet.html#a9f7555e69291a2d466a77a09422ac1f5">SparseSet::getComponent</a></div><div class="ttdeci">Component * getComponent(Entity e)</div><div class="ttdoc">Retrieves the component associated with the given entity.</div><div class="ttdef"><b>Definition</b> SparseSet.hpp:62</div></div>
 <div class="ttc" id="aclassSparseSet_html_ae6cdf41563ef3804f066652f801cb7ad"><div class="ttname"><a href="classSparseSet.html#ae6cdf41563ef3804f066652f801cb7ad">SparseSet::removeComponent</a></div><div class="ttdeci">void removeComponent(Entity e) override</div><div class="ttdoc">Removes the component associated with the given entity.</div><div class="ttdef"><b>Definition</b> SparseSet.hpp:79</div></div>
 </div><!-- fragment --></div><!-- contents -->

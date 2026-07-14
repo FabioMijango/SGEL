@@ -4,6 +4,7 @@ var hierarchy =
     [ "Animation", "classAnimation.html", null ],
     [ "Assets", "classAssets.html", null ],
     [ "BoxColliderComponent", "structBoxColliderComponent.html", null ],
+    [ "CameraComponent", "structCameraComponent.html", null ],
     [ "Engine", "classEngine.html", null ],
     [ "EntityManager", "classEntityManager.html", null ],
     [ "FPSManager", "classFPSManager.html", null ],
