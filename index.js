@@ -14,7 +14,9 @@ var index =
     [ "Examples", "index.html#autotoc_md12", [
       [ "1. Basic Window (<span class=\"tt\">01_basic_window</span>)", "index.html#autotoc_md13", null ],
       [ "2. Assets and Animations (<span class=\"tt\">02_assets_and_animations</span>)", "index.html#autotoc_md14", null ],
-      [ "3. Input Actions (<span class=\"tt\">03_inputActions</span>)", "index.html#autotoc_md15", null ]
+      [ "3. Input Actions (<span class=\"tt\">03_input_actions</span>)", "index.html#autotoc_md15", null ],
+      [ "4. Entity Management (<span class=\"tt\">04_managing_entities</span>)", "index.html#autotoc_md16", null ],
+      [ "5. Camera system (<span class=\"tt\">05_camera_system</span>)", "index.html#autotoc_md17", null ]
     ] ],
-    [ "Roadmap", "index.html#autotoc_md17", null ]
+    [ "Roadmap", "index.html#autotoc_md19", null ]
 ];

@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['clone_20the_20repository_20into_20the_20library_20folder_20for_20your_20project_0',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]],
-  ['cmake_20recommended_1',['Using CMake (Recommended)',['../index.html#autotoc_md5',1,'']]],
-  ['compile_20the_20library_2',['2. Compile the Library',['../index.html#autotoc_md10',1,'']]]
+  ['a_20submodule_0',['1. Add SGEL as a Submodule',['../index.html#autotoc_md6',1,'']]],
+  ['actions_2003_5finput_5factions_1',['3. Input Actions (&lt;span class=&quot;tt&quot;&gt;03_input_actions&lt;/span&gt;)',['../index.html#autotoc_md15',1,'']]],
+  ['add_20sgel_20as_20a_20submodule_2',['1. Add SGEL as a Submodule',['../index.html#autotoc_md6',1,'']]],
+  ['and_20animations_2002_5fassets_5fand_5fanimations_3',['2. Assets and Animations (&lt;span class=&quot;tt&quot;&gt;02_assets_and_animations&lt;/span&gt;)',['../index.html#autotoc_md14',1,'']]],
+  ['animations_2002_5fassets_5fand_5fanimations_4',['2. Assets and Animations (&lt;span class=&quot;tt&quot;&gt;02_assets_and_animations&lt;/span&gt;)',['../index.html#autotoc_md14',1,'']]],
+  ['as_20a_20submodule_5',['1. Add SGEL as a Submodule',['../index.html#autotoc_md6',1,'']]],
+  ['assets_20and_20animations_2002_5fassets_5fand_5fanimations_6',['2. Assets and Animations (&lt;span class=&quot;tt&quot;&gt;02_assets_and_animations&lt;/span&gt;)',['../index.html#autotoc_md14',1,'']]]
 ];

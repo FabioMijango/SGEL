@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['layer_0',['SGEL - Simple Game Engine Layer',['../index.html',1,'']]],
-  ['library_1',['2. Compile the Library',['../index.html#autotoc_md10',1,'']]],
-  ['library_20folder_20for_20your_20project_2',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]],
-  ['loadanimation_3',['loadAnimation',['../classAssets.html#a65b178efc40efcb2bf5c682f81c3f44b',1,'Assets::loadAnimation(const std::string &amp;animationID, const std::string &amp;textureID, SDL_FRect spriteRect)'],['../classAssets.html#adbd636e74c07184ca47a0bcbf8f403e4',1,'Assets::loadAnimation(const std::string &amp;animationID, const std::string &amp;textureID, SDL_FRect animRect, Uint32 frameCount, Uint32 speed)']]],
-  ['loadfromfile_4',['loadFromFile',['../classAssets.html#a0bc45e2fee19dfd8e7fd75599d232a30',1,'Assets']]],
-  ['loadtexture_5',['loadTexture',['../classAssets.html#a77f6909d9ae9568695d7e412fd751341',1,'Assets']]]
+  ['init_0',['init',['../classEngine.html#a4d5ec2c40a48635f42f34f23d499d1ef',1,'Engine::init()'],['../classScene.html#ac3721d8623a3d272ca69619fe914b522',1,'Scene::init()']]],
+  ['input_20actions_2003_5finput_5factions_1',['3. Input Actions (&lt;span class=&quot;tt&quot;&gt;03_input_actions&lt;/span&gt;)',['../index.html#autotoc_md15',1,'']]],
+  ['inputkey_2',['InputKey',['../structInputKey.html',1,'']]],
+  ['inputkeyhasher_3',['InputKeyHasher',['../structInputKeyHasher.html',1,'']]],
+  ['inputtype_4',['InputType',['../Action_8hpp.html#a288ccba5e4bb5b9abb5b4f76495e3a2f',1,'Action.hpp']]],
+  ['installation_5',['Installation',['../index.html#autotoc_md4',1,'Installation'],['../index.html#autotoc_md8',1,'Manual Installation']]],
+  ['instance_6',['Instance',['../classAssets.html#a557e654e00a0542517067979886eaba3',1,'Assets::Instance()'],['../classEngine.html#a134df7c9c41b67bf06a13d0414c9ee3b',1,'Engine::Instance()']]],
+  ['into_20the_20library_20folder_20for_20your_20project_7',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]],
+  ['isparseset_8',['ISparseSet',['../classISparseSet.html',1,'']]]
 ];

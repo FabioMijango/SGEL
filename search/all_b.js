@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['hascomponent_0',['hasComponent',['../classEntityManager.html#a6833c52c8d06f2dcc4c352c90f93da34',1,'EntityManager::hasComponent()'],['../classSparseSet.html#a62c2bea416fdb64e4c42015e65c5d0ea',1,'SparseSet::hasComponent()']]],
-  ['hasended_1',['hasEnded',['../classAnimation.html#a331c96b32dbb3feaab22e32029848b71',1,'Animation::hasEnded()'],['../classScene.html#ac6421c6df8dba50d02fdaf37538dfebf',1,'Scene::hasEnded()']]],
-  ['hash_5fvalue_2',['hash_value',['../structInputKey.html#a5fb5c5964145b27551062ec91e0cd0bf',1,'InputKey']]],
-  ['height_3',['height',['../structBoxColliderComponent.html#a23dfbf0b8fd728cb7375131e1c1a619c',1,'BoxColliderComponent']]],
-  ['horizontal_4',['Horizontal',['../Action_8hpp.html#a52220c897fc33a9e88b83416bca373c6ac1b5fa03ecdb95d4a45dd1c40b02527f',1,'Action.hpp']]],
-  ['horizontal_5fscroll_5',['Horizontal_Scroll',['../structAction.html#a1a3c931bd390ce73d234be2e57b4b8f5a7ff658fe320a6293eb4443a521101f27',1,'Action']]]
+  ['folder_20for_20your_20project_0',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]],
+  ['for_20your_20project_1',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]],
+  ['fps_5fdefault_2',['FPS_DEFAULT',['../FpsManager_8hpp.html#ab3ac02e6acb348129a019b9f20aa5c90',1,'FpsManager.hpp']]],
+  ['fps_5flower_5flimit_3',['FPS_LOWER_LIMIT',['../FpsManager_8hpp.html#a9555dceeaaffdd2669c991e6a300085b',1,'FpsManager.hpp']]],
+  ['fps_5fupper_5flimit_4',['FPS_UPPER_LIMIT',['../FpsManager_8hpp.html#aeaeac0f0b439344496e29abf60904d58',1,'FpsManager.hpp']]],
+  ['fpsmanager_5',['FPSManager',['../classFPSManager.html',1,'FPSManager'],['../classFPSManager.html#a240add0044b0eb7dd27587d0c473be3e',1,'FPSManager::FPSManager()']]],
+  ['fpsmanager_2ecpp_6',['FpsManager.cpp',['../FpsManager_8cpp.html',1,'']]],
+  ['fpsmanager_2ehpp_7',['FpsManager.hpp',['../FpsManager_8hpp.html',1,'']]],
+  ['frameratedelay_8',['framerateDelay',['../classFPSManager.html#a0258dca3052f6081beabc6f9ecdaf061',1,'FPSManager']]]
 ];

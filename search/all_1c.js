@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['_7eisparseset_0',['~ISparseSet',['../classISparseSet.html#a2d5457a62c4a423120ae5906982338ec',1,'ISparseSet']]],
-  ['_7escene_1',['~Scene',['../classScene.html#af6e09d91ebd10ae9cc7c12c39d06386c',1,'Scene']]]
+  ['y_0',['y',['../structAction.html#a31e39b0f071cdccc90a046cb7fef53e4',1,'Action']]],
+  ['your_20project_1',['2. Build Your Project',['../index.html#autotoc_md7',1,'']]],
+  ['your_20project_2',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]]
 ];

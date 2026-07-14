@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['your_20project_0',['2. Build Your Project',['../index.html#autotoc_md7',1,'']]],
-  ['your_20project_1',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]]
+  ['using_20cmake_20recommended_0',['Using CMake (Recommended)',['../index.html#autotoc_md5',1,'']]]
 ];

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['recommended_0',['Using CMake (Recommended)',['../index.html#autotoc_md5',1,'']]],
-  ['repository_20into_20the_20library_20folder_20for_20your_20project_1',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]],
-  ['requirements_2',['Requirements',['../index.html#autotoc_md2',1,'']]],
-  ['roadmap_3',['Roadmap',['../index.html#autotoc_md17',1,'']]]
+  ['management_2004_5fmanaging_5fentities_0',['4. Entity Management (&lt;span class=&quot;tt&quot;&gt;04_managing_entities&lt;/span&gt;)',['../index.html#autotoc_md16',1,'']]],
+  ['manual_20installation_1',['Manual Installation',['../index.html#autotoc_md8',1,'']]]
 ];

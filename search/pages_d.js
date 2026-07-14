@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['project_0',['2. Build Your Project',['../index.html#autotoc_md7',1,'']]],
-  ['project_1',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]]
+  ['layer_0',['SGEL - Simple Game Engine Layer',['../index.html',1,'']]],
+  ['library_1',['2. Compile the Library',['../index.html#autotoc_md10',1,'']]],
+  ['library_20folder_20for_20your_20project_2',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]]
 ];
