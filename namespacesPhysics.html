@@ -123,8 +123,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacesPhys
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a96ec85e04a07f1b960a86d84017bac9b" id="r_a96ec85e04a07f1b960a86d84017bac9b"><td class="memItemLeft">SDL_FRect&#160;</td><td class="memItemRight"><a class="el" href="#a96ec85e04a07f1b960a86d84017bac9b">getBoundingBox</a> (<a class="el" href="structTransformComponent.html">TransformComponent</a> &amp;transform, <a class="el" href="structBoxColliderComponent.html">BoxColliderComponent</a> &amp;collider)</td></tr>
+<tr class="memdesc:a96ec85e04a07f1b960a86d84017bac9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bounding box of an entity based on its transform and collider components.  <br /></td></tr>
 <tr class="memitem:a3c120761c37d24bafa41f4af36f04002" id="r_a3c120761c37d24bafa41f4af36f04002"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3c120761c37d24bafa41f4af36f04002">checkAABBCollision</a> (SDL_FRect rectA, SDL_FRect rectB)</td></tr>
+<tr class="memdesc:a3c120761c37d24bafa41f4af36f04002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for collision between two axis-aligned bounding boxes (AABBs).  <br /></td></tr>
 <tr class="memitem:a50dfccbfde77109e7aefb8fffcc7d156" id="r_a50dfccbfde77109e7aefb8fffcc7d156"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a50dfccbfde77109e7aefb8fffcc7d156">checkPointAABBCollision</a> (SDL_Point point, SDL_FRect rect)</td></tr>
+<tr class="memdesc:a50dfccbfde77109e7aefb8fffcc7d156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for collision between a point and an axis-aligned bounding box (AABB).  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a3c120761c37d24bafa41f4af36f04002" name="a3c120761c37d24bafa41f4af36f04002"></a>
@@ -145,6 +148,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Check for collision between two axis-aligned bounding boxes (AABBs). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rectA</td><td>First rectangle. </td></tr>
+    <tr><td class="paramname">rectB</td><td>Second rectangle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the rectangles collide, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -167,6 +180,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Check for collision between a point and an axis-aligned bounding box (AABB). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>Point to check. </td></tr>
+    <tr><td class="paramname">rect</td><td>Rectangle to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the point is inside the rectangle, false otherwise. </dd></dl>
+
 </div>
 </div>
 <a id="a96ec85e04a07f1b960a86d84017bac9b" name="a96ec85e04a07f1b960a86d84017bac9b"></a>
@@ -187,6 +210,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the bounding box of an entity based on its transform and collider components. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>Transform component of the entity. </td></tr>
+    <tr><td class="paramname">collider</td><td>Collider component of the entity. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Bounding box rectangle. </dd></dl>
 
 </div>
 </div>

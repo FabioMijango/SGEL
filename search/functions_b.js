@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['scene_0',['Scene',['../classScene.html#a93ccc41b0a2f6c24e467d5d9de76ec0d',1,'Scene']]],
-  ['screentoworld_1',['screenToWorld',['../namespacesCamera.html#ad0cea7f4a9e0a6ac95b8bbfd0f655ef8',1,'sCamera']]],
-  ['sdoaction_2',['sDoAction',['../classScene.html#aa445449fc0befdff76d7228aaf5a90e4',1,'Scene']]],
-  ['setframerate_3',['setFramerate',['../classFPSManager.html#a31e00c164ce579b050a963eee6fc4458',1,'FPSManager']]],
-  ['sparseset_4',['SparseSet',['../classSparseSet.html#a15bae3e2e47b00f8725f86ea111d6d90',1,'SparseSet']]],
-  ['sprite_5',['Sprite',['../classSprite.html#a6f162176f62bba1e5037bfea306a5410',1,'Sprite']]],
-  ['squit_6',['sQuit',['../classEngine.html#ad20ea1662b77a9071916a4540830f120',1,'Engine']]],
-  ['srender_7',['sRender',['../classEngine.html#a49670d409dd80eee3e63f7c0fd62d1b4',1,'Engine::sRender()'],['../classScene.html#a1c42ea8255b3af6237e3e5b2c4debe21',1,'Scene::sRender()']]],
-  ['suserinput_8',['sUserInput',['../classEngine.html#a9319584dfe318fe28b2abc144a15afd6',1,'Engine']]]
+  ['registeraction_0',['registerAction',['../classScene.html#a25342f544c522ce6926648922fd390c2',1,'Scene::registerAction(const SDL_Scancode scancode, const std::string &amp;name)'],['../classScene.html#abbc3f2c99f092bfe13724d54ed86eff2',1,'Scene::registerAction(SDL_MouseButtonFlags mouseButton, const std::string &amp;name)'],['../classScene.html#af3085eee4e68a3b5809509a75eb432fd',1,'Scene::registerAction(ScrollType scrollOrientation, const std::string &amp;name)']]],
+  ['registermousemotion_1',['registerMouseMotion',['../classScene.html#ac55778c65d92d03389a2b1f60a8f3fd2',1,'Scene']]],
+  ['removecomponent_2',['removeComponent',['../classEntityManager.html#a8b285b23bb186bf24cbe9a51a29f2113',1,'EntityManager::removeComponent()'],['../classISparseSet.html#afcd5a07a0b4966e1a9a6db57d30f1473',1,'ISparseSet::removeComponent()'],['../classSparseSet.html#ae6cdf41563ef3804f066652f801cb7ad',1,'SparseSet::removeComponent()']]]
 ];

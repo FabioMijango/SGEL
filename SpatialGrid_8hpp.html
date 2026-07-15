@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SGEL: Class Index</title>
+<title>SGEL: src/SpatialGrid.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('classes.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('SpatialGrid_8hpp.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -116,45 +116,43 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classes.html',
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Class Index</div></div>
+  <div class="headertitle"><div class="title">SpatialGrid.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="qindex"><a class="qindex" href="#letter_A">A</a><div class="alphasepar"></div><a class="qindex" href="#letter_B">B</a><div class="alphasepar"></div><a class="qindex" href="#letter_C">C</a><div class="alphasepar"></div><a class="qindex" href="#letter_E">E</a><div class="alphasepar"></div><a class="qindex" href="#letter_F">F</a><div class="alphasepar"></div><a class="qindex" href="#letter_I">I</a><div class="alphasepar"></div><a class="qindex" href="#letter_K">K</a><div class="alphasepar"></div><a class="qindex" href="#letter_S">S</a><div class="alphasepar"></div><a class="qindex" href="#letter_T">T</a></div>
-<div class="classindex">
-<dl class="classindex even">
-<dt class="alphachar"><a id="letter_A" name="letter_A">A</a></dt>
-<dd><a class="el" href="structAction.html">Action</a></dd><dd><a class="el" href="classAnimation.html">Animation</a></dd><dd><a class="el" href="classAssets.html">Assets</a></dd></dl>
-<dl class="classindex odd">
-<dt class="alphachar"><a id="letter_B" name="letter_B">B</a></dt>
-<dd><a class="el" href="structBoxColliderComponent.html">BoxColliderComponent</a></dd></dl>
-<dl class="classindex even">
-<dt class="alphachar"><a id="letter_C" name="letter_C">C</a></dt>
-<dd><a class="el" href="structCameraComponent.html">CameraComponent</a></dd><dd><a class="el" href="structCellCoord.html">CellCoord</a></dd><dd><a class="el" href="structCellCoordHash.html">CellCoordHash</a></dd></dl>
-<dl class="classindex odd">
-<dt class="alphachar"><a id="letter_E" name="letter_E">E</a></dt>
-<dd><a class="el" href="classEngine.html">Engine</a></dd><dd><a class="el" href="classEntityManager.html">EntityManager</a></dd></dl>
-<dl class="classindex even">
-<dt class="alphachar"><a id="letter_F" name="letter_F">F</a></dt>
-<dd><a class="el" href="classFPSManager.html">FPSManager</a></dd></dl>
-<dl class="classindex odd">
-<dt class="alphachar"><a id="letter_I" name="letter_I">I</a></dt>
-<dd><a class="el" href="structInputKey.html">InputKey</a></dd><dd><a class="el" href="structInputKeyHasher.html">InputKeyHasher</a></dd><dd><a class="el" href="classISparseSet.html">ISparseSet</a></dd></dl>
-<dl class="classindex even">
-<dt class="alphachar"><a id="letter_K" name="letter_K">K</a></dt>
-<dd><a class="el" href="structKinematicComponent.html">KinematicComponent</a></dd></dl>
-<dl class="classindex odd">
-<dt class="alphachar"><a id="letter_S" name="letter_S">S</a></dt>
-<dd><a class="el" href="classScene.html">Scene</a></dd><dd><a class="el" href="classSparseSet.html">SparseSet</a></dd><dd><a class="el" href="classSpatialGrid.html">SpatialGrid</a></dd><dd><a class="el" href="classSprite.html">Sprite</a></dd></dl>
-<dl class="classindex even">
-<dt class="alphachar"><a id="letter_T" name="letter_T">T</a></dt>
-<dd><a class="el" href="structTimeComponent.html">TimeComponent</a></dd><dd><a class="el" href="structTransformComponent.html">TransformComponent</a></dd></dl>
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;SDL3/SDL_stdinc.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="CameraUtils_8hpp_source.html">CameraUtils.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="EntityManager_8hpp_source.html">EntityManager.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="PhysicsUtils_8hpp_source.html">PhysicsUtils.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Types_8hpp_source.html">Types.hpp</a>&quot;</code><br />
 </div>
+<p><a href="SpatialGrid_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:CellCoord" id="r_CellCoord"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structCellCoord.html">CellCoord</a></td></tr>
+<tr class="memitem:CellCoordHash" id="r_CellCoordHash"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structCellCoordHash.html">CellCoordHash</a></td></tr>
+<tr class="memitem:SpatialGrid" id="r_SpatialGrid"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classSpatialGrid.html">SpatialGrid</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A spatial grid for broad-phase collision detection and camera culling.  <a href="classSpatialGrid.html#details">More...</a><br /></td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="SpatialGrid_8hpp.html">SpatialGrid.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

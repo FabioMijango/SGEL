@@ -5,6 +5,8 @@ var hierarchy =
     [ "Assets", "classAssets.html", null ],
     [ "BoxColliderComponent", "structBoxColliderComponent.html", null ],
     [ "CameraComponent", "structCameraComponent.html", null ],
+    [ "CellCoord", "structCellCoord.html", null ],
+    [ "CellCoordHash", "structCellCoordHash.html", null ],
     [ "Engine", "classEngine.html", null ],
     [ "EntityManager", "classEntityManager.html", null ],
     [ "FPSManager", "classFPSManager.html", null ],
@@ -15,6 +17,7 @@ var hierarchy =
     ] ],
     [ "KinematicComponent", "structKinematicComponent.html", null ],
     [ "Scene", "classScene.html", null ],
+    [ "SpatialGrid", "classSpatialGrid.html", null ],
     [ "Sprite", "classSprite.html", null ],
     [ "TimeComponent", "structTimeComponent.html", null ],
     [ "TransformComponent", "structTransformComponent.html", null ]

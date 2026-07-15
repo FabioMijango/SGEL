@@ -125,43 +125,42 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('PhysicsUtils_8
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespacesPhysics.html">    5</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesPhysics.html">sPhysics</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="namespacesPhysics.html#a96ec85e04a07f1b960a86d84017bac9b">    7</a></span>    SDL_FRect <a class="code hl_function" href="namespacesPhysics.html#a96ec85e04a07f1b960a86d84017bac9b">getBoundingBox</a>(<a class="code hl_struct" href="structTransformComponent.html">TransformComponent</a>&amp; transform, <a class="code hl_struct" href="structBoxColliderComponent.html">BoxColliderComponent</a>&amp; collider) {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        SDL_FRect boundingBox = {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            transform.<a class="code hl_variable" href="structTransformComponent.html#a75b045b5f92f3830e36c66839427f262">position</a>.x + collider.<a class="code hl_variable" href="structBoxColliderComponent.html#aef8c7434a23cd11d769263b9e97785dc">offset</a>.x,</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            transform.<a class="code hl_variable" href="structTransformComponent.html#a75b045b5f92f3830e36c66839427f262">position</a>.y + collider.<a class="code hl_variable" href="structBoxColliderComponent.html#aef8c7434a23cd11d769263b9e97785dc">offset</a>.y,</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            collider.<a class="code hl_variable" href="structBoxColliderComponent.html#aced958388f731f139b9898cb16c92843">width</a> * transform.<a class="code hl_variable" href="structTransformComponent.html#a63180cf6df8383e00e7ff2c74755fa68">scale</a>.x,</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            collider.<a class="code hl_variable" href="structBoxColliderComponent.html#a23dfbf0b8fd728cb7375131e1c1a619c">height</a> * transform.<a class="code hl_variable" href="structTransformComponent.html#a63180cf6df8383e00e7ff2c74755fa68">scale</a>.y</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        };</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">return</span> boundingBox;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacesPhysics.html#a96ec85e04a07f1b960a86d84017bac9b">   12</a></span>    SDL_FRect <a class="code hl_function" href="namespacesPhysics.html#a96ec85e04a07f1b960a86d84017bac9b">getBoundingBox</a>(<a class="code hl_struct" href="structTransformComponent.html">TransformComponent</a>&amp; transform, <a class="code hl_struct" href="structBoxColliderComponent.html">BoxColliderComponent</a>&amp; collider) {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        SDL_FRect boundingBox = {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            transform.<a class="code hl_variable" href="structTransformComponent.html#a75b045b5f92f3830e36c66839427f262">position</a>.x + collider.<a class="code hl_variable" href="structBoxColliderComponent.html#aef8c7434a23cd11d769263b9e97785dc">offset</a>.x,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            transform.<a class="code hl_variable" href="structTransformComponent.html#a75b045b5f92f3830e36c66839427f262">position</a>.y + collider.<a class="code hl_variable" href="structBoxColliderComponent.html#aef8c7434a23cd11d769263b9e97785dc">offset</a>.y,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            collider.<a class="code hl_variable" href="structBoxColliderComponent.html#aced958388f731f139b9898cb16c92843">width</a> * transform.<a class="code hl_variable" href="structTransformComponent.html#a63180cf6df8383e00e7ff2c74755fa68">scale</a>.x,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            collider.<a class="code hl_variable" href="structBoxColliderComponent.html#a23dfbf0b8fd728cb7375131e1c1a619c">height</a> * transform.<a class="code hl_variable" href="structTransformComponent.html#a63180cf6df8383e00e7ff2c74755fa68">scale</a>.y</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        };</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">return</span> boundingBox;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
 </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespacesPhysics.html#a3c120761c37d24bafa41f4af36f04002">   17</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacesPhysics.html#a3c120761c37d24bafa41f4af36f04002">checkAABBCollision</a>(SDL_FRect rectA, SDL_FRect rectB) {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">return</span> rectA.x &lt; rectB.x + rectB.w &amp;&amp;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>               rectA.x + rectA.w &gt; rectB.x &amp;&amp;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>               rectA.y &lt; rectB.y + rectB.h &amp;&amp;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>               rectA.y + rectA.h &gt; rectB.y;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespacesPhysics.html#a3c120761c37d24bafa41f4af36f04002">   28</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacesPhysics.html#a3c120761c37d24bafa41f4af36f04002">checkAABBCollision</a>(SDL_FRect rectA, SDL_FRect rectB) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">return</span> rectA.x &lt; rectB.x + rectB.w &amp;&amp;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>               rectA.x + rectA.w &gt; rectB.x &amp;&amp;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>               rectA.y &lt; rectB.y + rectB.h &amp;&amp;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>               rectA.y + rectA.h &gt; rectB.y;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespacesPhysics.html#a50dfccbfde77109e7aefb8fffcc7d156">   24</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacesPhysics.html#a50dfccbfde77109e7aefb8fffcc7d156">checkPointAABBCollision</a>(SDL_Point point, SDL_FRect rect) {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> point.x &gt;= rect.x &amp;&amp; point.x &lt;= rect.x + rect.w &amp;&amp;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>               point.y &gt;= rect.y &amp;&amp; point.y &lt;= rect.y + rect.h;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespacesPhysics.html#a50dfccbfde77109e7aefb8fffcc7d156">   41</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacesPhysics.html#a50dfccbfde77109e7aefb8fffcc7d156">checkPointAABBCollision</a>(SDL_Point point, SDL_FRect rect) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> point.x &gt;= rect.x &amp;&amp; point.x &lt;= rect.x + rect.w &amp;&amp;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>               point.y &gt;= rect.y &amp;&amp; point.y &lt;= rect.y + rect.h;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
 </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
 </div>
 <div class="ttc" id="aEntityManager_8hpp_html"><div class="ttname"><a href="EntityManager_8hpp.html">EntityManager.hpp</a></div></div>
 <div class="ttc" id="aTypes_8hpp_html"><div class="ttname"><a href="Types_8hpp.html">Types.hpp</a></div></div>
 <div class="ttc" id="anamespacesPhysics_html"><div class="ttname"><a href="namespacesPhysics.html">sPhysics</a></div><div class="ttdef"><b>Definition</b> PhysicsUtils.hpp:5</div></div>
-<div class="ttc" id="anamespacesPhysics_html_a3c120761c37d24bafa41f4af36f04002"><div class="ttname"><a href="namespacesPhysics.html#a3c120761c37d24bafa41f4af36f04002">sPhysics::checkAABBCollision</a></div><div class="ttdeci">bool checkAABBCollision(SDL_FRect rectA, SDL_FRect rectB)</div><div class="ttdef"><b>Definition</b> PhysicsUtils.hpp:17</div></div>
-<div class="ttc" id="anamespacesPhysics_html_a50dfccbfde77109e7aefb8fffcc7d156"><div class="ttname"><a href="namespacesPhysics.html#a50dfccbfde77109e7aefb8fffcc7d156">sPhysics::checkPointAABBCollision</a></div><div class="ttdeci">bool checkPointAABBCollision(SDL_Point point, SDL_FRect rect)</div><div class="ttdef"><b>Definition</b> PhysicsUtils.hpp:24</div></div>
-<div class="ttc" id="anamespacesPhysics_html_a96ec85e04a07f1b960a86d84017bac9b"><div class="ttname"><a href="namespacesPhysics.html#a96ec85e04a07f1b960a86d84017bac9b">sPhysics::getBoundingBox</a></div><div class="ttdeci">SDL_FRect getBoundingBox(TransformComponent &amp;transform, BoxColliderComponent &amp;collider)</div><div class="ttdef"><b>Definition</b> PhysicsUtils.hpp:7</div></div>
+<div class="ttc" id="anamespacesPhysics_html_a3c120761c37d24bafa41f4af36f04002"><div class="ttname"><a href="namespacesPhysics.html#a3c120761c37d24bafa41f4af36f04002">sPhysics::checkAABBCollision</a></div><div class="ttdeci">bool checkAABBCollision(SDL_FRect rectA, SDL_FRect rectB)</div><div class="ttdoc">Check for collision between two axis-aligned bounding boxes (AABBs).</div><div class="ttdef"><b>Definition</b> PhysicsUtils.hpp:28</div></div>
+<div class="ttc" id="anamespacesPhysics_html_a50dfccbfde77109e7aefb8fffcc7d156"><div class="ttname"><a href="namespacesPhysics.html#a50dfccbfde77109e7aefb8fffcc7d156">sPhysics::checkPointAABBCollision</a></div><div class="ttdeci">bool checkPointAABBCollision(SDL_Point point, SDL_FRect rect)</div><div class="ttdoc">Check for collision between a point and an axis-aligned bounding box (AABB).</div><div class="ttdef"><b>Definition</b> PhysicsUtils.hpp:41</div></div>
+<div class="ttc" id="anamespacesPhysics_html_a96ec85e04a07f1b960a86d84017bac9b"><div class="ttname"><a href="namespacesPhysics.html#a96ec85e04a07f1b960a86d84017bac9b">sPhysics::getBoundingBox</a></div><div class="ttdeci">SDL_FRect getBoundingBox(TransformComponent &amp;transform, BoxColliderComponent &amp;collider)</div><div class="ttdoc">Get the bounding box of an entity based on its transform and collider components.</div><div class="ttdef"><b>Definition</b> PhysicsUtils.hpp:12</div></div>
 <div class="ttc" id="astructBoxColliderComponent_html"><div class="ttname"><a href="structBoxColliderComponent.html">BoxColliderComponent</a></div><div class="ttdef"><b>Definition</b> Types.hpp:22</div></div>
 <div class="ttc" id="astructBoxColliderComponent_html_a23dfbf0b8fd728cb7375131e1c1a619c"><div class="ttname"><a href="structBoxColliderComponent.html#a23dfbf0b8fd728cb7375131e1c1a619c">BoxColliderComponent::height</a></div><div class="ttdeci">float height</div><div class="ttdef"><b>Definition</b> Types.hpp:24</div></div>
 <div class="ttc" id="astructBoxColliderComponent_html_aced958388f731f139b9898cb16c92843"><div class="ttname"><a href="structBoxColliderComponent.html#aced958388f731f139b9898cb16c92843">BoxColliderComponent::width</a></div><div class="ttdeci">float width</div><div class="ttdef"><b>Definition</b> Types.hpp:23</div></div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SGEL: sCamera Namespace Reference</title>
+<title>SGEL: CellCoord Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacesCamera.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('structCellCoord.html','','structCellCoord-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -116,108 +116,72 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacesCame
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">sCamera Namespace Reference</div></div>
+  <div class="headertitle"><div class="title">CellCoord Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="SpatialGrid_8hpp_source.html">SpatialGrid.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a44ba09485e2cc4efacec26f2525a9d1a" id="r_a44ba09485e2cc4efacec26f2525a9d1a"><td class="memItemLeft">SDL_FPoint&#160;</td><td class="memItemRight"><a class="el" href="#a44ba09485e2cc4efacec26f2525a9d1a">worldToScreen</a> (const SDL_FPoint &amp;worldPos, <a class="el" href="structCameraComponent.html">CameraComponent</a> camera)</td></tr>
-<tr class="memdesc:a44ba09485e2cc4efacec26f2525a9d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert world coordinates to screen coordinates based on the camera's position and zoom.  <br /></td></tr>
-<tr class="memitem:ad0cea7f4a9e0a6ac95b8bbfd0f655ef8" id="r_ad0cea7f4a9e0a6ac95b8bbfd0f655ef8"><td class="memItemLeft">SDL_FPoint&#160;</td><td class="memItemRight"><a class="el" href="#ad0cea7f4a9e0a6ac95b8bbfd0f655ef8">screenToWorld</a> (const SDL_FPoint &amp;screenPos, <a class="el" href="structCameraComponent.html">CameraComponent</a> camera)</td></tr>
-<tr class="memdesc:ad0cea7f4a9e0a6ac95b8bbfd0f655ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert screen coordinates to world coordinates based on the camera's position and zoom.  <br /></td></tr>
-<tr class="memitem:abb962e288c26854e61225f230172c74a" id="r_abb962e288c26854e61225f230172c74a"><td class="memItemLeft">SDL_FRect&#160;</td><td class="memItemRight"><a class="el" href="#abb962e288c26854e61225f230172c74a">getViewBounds</a> (<a class="el" href="structCameraComponent.html">CameraComponent</a> &amp;camera)</td></tr>
-<tr class="memdesc:abb962e288c26854e61225f230172c74a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bounds of the camera's view rectangle.  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac28748ef3256c5c1de7478cd7ca68efa" id="r_ac28748ef3256c5c1de7478cd7ca68efa"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac28748ef3256c5c1de7478cd7ca68efa">operator==</a> (const <a class="el" href="structCellCoord.html">CellCoord</a> &amp;other) const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ac2d62f675cdda4f87c9b11436e96f923" id="r_ac2d62f675cdda4f87c9b11436e96f923"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ac2d62f675cdda4f87c9b11436e96f923">x</a></td></tr>
+<tr class="memitem:acdf28e0a1527432bb8b4ce414d1a7f1b" id="r_acdf28e0a1527432bb8b4ce414d1a7f1b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acdf28e0a1527432bb8b4ce414d1a7f1b">y</a></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="abb962e288c26854e61225f230172c74a" name="abb962e288c26854e61225f230172c74a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb962e288c26854e61225f230172c74a">&#9670;&#160;</a></span>getViewBounds()</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac28748ef3256c5c1de7478cd7ca68efa" name="ac28748ef3256c5c1de7478cd7ca68efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28748ef3256c5c1de7478cd7ca68efa">&#9670;&#160;</a></span>operator==()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_FRect sCamera::getViewBounds </td>
+          <td class="memname">bool CellCoord::operator== </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structCameraComponent.html">CameraComponent</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="structCellCoord.html">CellCoord</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the bounds of the camera's view rectangle. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">camera</td><td>Camera component containing position, zoom, and viewport information. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Rectangle bounds. </dd></dl>
-
 </div>
 </div>
-<a id="ad0cea7f4a9e0a6ac95b8bbfd0f655ef8" name="ad0cea7f4a9e0a6ac95b8bbfd0f655ef8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0cea7f4a9e0a6ac95b8bbfd0f655ef8">&#9670;&#160;</a></span>screenToWorld()</h2>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="ac2d62f675cdda4f87c9b11436e96f923" name="ac2d62f675cdda4f87c9b11436e96f923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d62f675cdda4f87c9b11436e96f923">&#9670;&#160;</a></span>x</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_FPoint sCamera::screenToWorld </td>
-          <td>(</td>
-          <td class="paramtype">const SDL_FPoint &amp;</td>          <td class="paramname"><span class="paramname"><em>screenPos</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structCameraComponent.html">CameraComponent</a></td>          <td class="paramname"><span class="paramname"><em>camera</em></span>&#160;)</td>
+          <td class="memname">int CellCoord::x</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Convert screen coordinates to world coordinates based on the camera's position and zoom. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">screenPos</td><td>Screen coordinates to convert. </td></tr>
-    <tr><td class="paramname">camera</td><td>Camera component containing position, zoom, and viewport information. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>World coordinates. </dd></dl>
-
 </div>
 </div>
-<a id="a44ba09485e2cc4efacec26f2525a9d1a" name="a44ba09485e2cc4efacec26f2525a9d1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44ba09485e2cc4efacec26f2525a9d1a">&#9670;&#160;</a></span>worldToScreen()</h2>
+<a id="acdf28e0a1527432bb8b4ce414d1a7f1b" name="acdf28e0a1527432bb8b4ce414d1a7f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdf28e0a1527432bb8b4ce414d1a7f1b">&#9670;&#160;</a></span>y</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_FPoint sCamera::worldToScreen </td>
-          <td>(</td>
-          <td class="paramtype">const SDL_FPoint &amp;</td>          <td class="paramname"><span class="paramname"><em>worldPos</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structCameraComponent.html">CameraComponent</a></td>          <td class="paramname"><span class="paramname"><em>camera</em></span>&#160;)</td>
+          <td class="memname">int CellCoord::y</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Convert world coordinates to screen coordinates based on the camera's position and zoom. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">worldPos</td><td>World coordinates to convert. </td></tr>
-    <tr><td class="paramname">camera</td><td>Camera component containing position, zoom, and viewport information. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Screen coordinates. </dd></dl>
-
 </div>
 </div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>src/<a class="el" href="SpatialGrid_8hpp_source.html">SpatialGrid.hpp</a></li>
+<li>src/<a class="el" href="SpatialGrid_8cpp.html">SpatialGrid.cpp</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -231,7 +195,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="namespacesCamera.html">sCamera</a></li>
+    <li class="navelem"><a href="structCellCoord.html">CellCoord</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

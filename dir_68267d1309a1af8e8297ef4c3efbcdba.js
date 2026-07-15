@@ -14,6 +14,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "PhysicsUtils.hpp", "PhysicsUtils_8hpp.html", "PhysicsUtils_8hpp" ],
     [ "Scene.hpp", "Scene_8hpp.html", "Scene_8hpp" ],
     [ "SparseSet.hpp", "SparseSet_8hpp.html", "SparseSet_8hpp" ],
+    [ "SpatialGrid.cpp", "SpatialGrid_8cpp.html", null ],
+    [ "SpatialGrid.hpp", "SpatialGrid_8hpp.html", "SpatialGrid_8hpp" ],
     [ "Sprite.hpp", "Sprite_8hpp.html", "Sprite_8hpp" ],
     [ "Types.hpp", "Types_8hpp.html", "Types_8hpp" ]
 ];
