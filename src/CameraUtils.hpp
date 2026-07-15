@@ -4,7 +4,12 @@
 #include "Types.hpp"
 
 namespace sCamera {
-
+    /**
+     * @brief Convert world coordinates to screen coordinates based on the camera's position and zoom.
+     * @param worldPos World coordinates to convert.
+     * @param camera Camera component containing position, zoom, and viewport information.
+     * @return Screen coordinates.
+     */
     SDL_FPoint worldToScreen(const SDL_FPoint& worldPos, CameraComponent camera) {
         return {
             (worldPos.x - camera.position.x) * camera.zoom + camera.viewport.x * 0.5f,
@@ -12,6 +17,12 @@ namespace sCamera {
         };
     }
 
+    /**
+     * @brief Convert screen coordinates to world coordinates based on the camera's position and zoom.
+     * @param screenPos Screen coordinates to convert.
+     * @param camera Camera component containing position, zoom, and viewport information.
+     * @return World coordinates.
+     */
     SDL_FPoint screenToWorld(const SDL_FPoint& screenPos, CameraComponent camera) {
         return {
             (screenPos.x - (camera.viewport.x * 0.5f)) / camera.zoom + camera.position.x,
@@ -19,6 +30,11 @@ namespace sCamera {
         };
     }
 
+    /**
+     * @brief Get the bounds of the camera's view rectangle.
+     * @param camera Camera component containing position, zoom, and viewport information.
+     * @return Rectangle bounds.
+     */
     SDL_FRect getViewBounds(CameraComponent& camera) {
         float viewW = camera.viewport.x * camera.zoom;
         float viewH = camera.viewport.y * camera.zoom;
