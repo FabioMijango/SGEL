@@ -10,7 +10,7 @@ namespace sCamera {
      * @param camera Camera component containing position, zoom, and viewport information.
      * @return Screen coordinates.
      */
-    SDL_FPoint worldToScreen(const SDL_FPoint& worldPos, CameraComponent camera) {
+    inline SDL_FPoint worldToScreen(const SDL_FPoint& worldPos, CameraComponent camera) {
         return {
             (worldPos.x - camera.position.x) * camera.zoom + camera.viewport.x * 0.5f,
             (worldPos.y - camera.position.y) * camera.zoom + camera.viewport.y * 0.5f
@@ -23,7 +23,7 @@ namespace sCamera {
      * @param camera Camera component containing position, zoom, and viewport information.
      * @return World coordinates.
      */
-    SDL_FPoint screenToWorld(const SDL_FPoint& screenPos, CameraComponent camera) {
+    inline SDL_FPoint screenToWorld(const SDL_FPoint& screenPos, CameraComponent camera) {
         return {
             (screenPos.x - (camera.viewport.x * 0.5f)) / camera.zoom + camera.position.x,
             (screenPos.y - (camera.viewport.y * 0.5f)) / camera.zoom + camera.position.y
@@ -35,7 +35,7 @@ namespace sCamera {
      * @param camera Camera component containing position, zoom, and viewport information.
      * @return Rectangle bounds.
      */
-    SDL_FRect getViewBounds(CameraComponent& camera) {
+    inline SDL_FRect getViewBounds(CameraComponent& camera) {
         float viewW = camera.viewport.x * camera.zoom;
         float viewH = camera.viewport.y * camera.zoom;
 
