@@ -31,7 +31,7 @@ FetchContent_MakeAvailable(SDL3 SDL3_image)
 file(GLOB_RECURSE SRC_FILES "src/*.cpp")
 file(GLOB_RECURSE HEADER_FILES "src/*.hpp")
 
-add_library(${PROJECT_NAME} SGEL.hpp ${SRC_FILES} ${HEADER_FILES})
+add_library(${PROJECT_NAME} ${SRC_FILES} ${HEADER_FILES})
 
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_23)
 
