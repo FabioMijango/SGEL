@@ -36,7 +36,7 @@ public:
      * @param spriteRect Rectangle defining the single sprite.
      */
     Animation(const std::string& name, SDL_Texture* texture, SDL_FRect spriteRect):
-    Animation(name, texture, spriteRect, 1, 0)
+    Animation(name, texture, spriteRect, 1, 1)
     {
         m_spriteRect = spriteRect;
     }
