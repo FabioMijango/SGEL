@@ -31,6 +31,8 @@ var NAVTREEINDEX0 =
 "FpsManager_8hpp_source.html":[4,0,0,10],
 "PhysicsUtils_8hpp.html":[4,0,0,11],
 "PhysicsUtils_8hpp_source.html":[4,0,0,11],
+"SGEL_8hpp.html":[4,0,1],
+"SGEL_8hpp_source.html":[4,0,1],
 "Scene_8hpp.html":[4,0,0,12],
 "Scene_8hpp_source.html":[4,0,0,12],
 "SparseSet_8hpp.html":[4,0,0,13],
