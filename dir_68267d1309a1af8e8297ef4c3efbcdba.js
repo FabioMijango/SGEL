@@ -13,6 +13,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "FpsManager.hpp", "FpsManager_8hpp.html", "FpsManager_8hpp" ],
     [ "PhysicsUtils.hpp", "PhysicsUtils_8hpp.html", "PhysicsUtils_8hpp" ],
     [ "Scene.hpp", "Scene_8hpp.html", "Scene_8hpp" ],
+    [ "SGEL.hpp", "SGEL_8hpp.html", null ],
     [ "SparseSet.hpp", "SparseSet_8hpp.html", "SparseSet_8hpp" ],
     [ "SpatialGrid.cpp", "SpatialGrid_8cpp.html", null ],
     [ "SpatialGrid.hpp", "SpatialGrid_8hpp.html", "SpatialGrid_8hpp" ],
