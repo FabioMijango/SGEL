@@ -37,3 +37,7 @@ struct CameraComponent {
 struct TimeComponent {
     Uint64 timestamp { 0 };
 };
+
+struct TagComponent {
+    const char* tagName { nullptr };
+};
