@@ -67,7 +67,7 @@ public:
 
     /**
      * @brief Retrieves a list of potential collision pairs from the spatial grid.
-     * This method returns pairs of entities that are in close proximity and may potentially collide.
+     * This method returns pairs of entities that are in proximity and may potentially collide.
      * @return Vector of pairs of entities
      */
     VectPairEntity          getPotentialCollisions() const;
