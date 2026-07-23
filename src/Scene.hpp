@@ -74,9 +74,11 @@ public:
 
     /**
      * @brief Initializes the scene.
+     * @param screenData Optional pointer for passing screen-related data.
      * @return true if initialization successful, false otherwise.
+     * @note If screenData isn't needed, use null;
      */
-    virtual bool            init() = 0;
+    virtual bool            init(void** screenData) = 0;
 
     /**
      * @brief Updates scene logic each frame.

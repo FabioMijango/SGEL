@@ -25,7 +25,7 @@ SDL_AppResult Engine::init(const SDL_Point& windowSize, const Uint32 fpsLimit, c
     }
 
     m_scene = initialScene;
-    if (!m_scene->init()) {
+    if (!m_scene->init(nullptr)) {
         SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error", "Failed to initialize first scene", nullptr);
         return SDL_APP_FAILURE;
     }
