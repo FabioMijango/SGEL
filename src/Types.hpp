@@ -20,12 +20,11 @@ struct KinematicComponent {
 };
 
 struct BoxColliderComponent {
-    float width { 0.0f };
-    float height { 0.0f };
+    SDL_FPoint size { 0.0f, 0.0f };
     SDL_FPoint offset { 0.0f, 0.0f };
 
-    // Uint32 collisionLayer { 0 };
-    // Uint32 collisionMask { 0 };
+    Uint32 collisionLayer { 0 };
+    Uint32 collisionMask { 0 };
 };
 
 struct CameraComponent {
@@ -37,4 +36,8 @@ struct CameraComponent {
 
 struct TimeComponent {
     Uint64 timestamp { 0 };
+};
+
+struct TagComponent {
+    const char* tagName { nullptr };
 };

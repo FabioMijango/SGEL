@@ -5,14 +5,14 @@ Engine& Engine::Instance() {
     return instance;
 }
 
-SDL_AppResult Engine::init(const SDL_Point& windowSize, const Uint32 fpsLimit, const std::shared_ptr<Scene>& initialScene) {
+SDL_AppResult Engine::init(const SDL_Point& windowSize, const Uint32 fpsLimit, const std::shared_ptr<Scene>& initialScene, const std::string& windowTitle, SDL_WindowFlags windowFlags) {
     if (!SDL_Init(SDL_INIT_VIDEO)) {
         SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error", SDL_GetError(), nullptr);
         return SDL_APP_FAILURE;
     }
 
-    if (!SDL_CreateWindowAndRenderer("SDL3 App", windowSize.x, windowSize.y,
-    SDL_WINDOW_RESIZABLE, &m_window, &m_renderer)) {
+    if (!SDL_CreateWindowAndRenderer(windowTitle.c_str(), windowSize.x, windowSize.y,
+    windowFlags, &m_window, &m_renderer)) {
         SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error", SDL_GetError(), nullptr);
         return SDL_APP_FAILURE;
     }
@@ -25,7 +25,7 @@ SDL_AppResult Engine::init(const SDL_Point& windowSize, const Uint32 fpsLimit, c
     }
 
     m_scene = initialScene;
-    if (!m_scene->init()) {
+    if (!m_scene->init(nullptr)) {
         SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error", "Failed to initialize first scene", nullptr);
         return SDL_APP_FAILURE;
     }

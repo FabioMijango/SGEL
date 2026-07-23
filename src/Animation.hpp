@@ -36,7 +36,7 @@ public:
      * @param spriteRect Rectangle defining the single sprite.
      */
     Animation(const std::string& name, SDL_Texture* texture, SDL_FRect spriteRect):
-    Animation(name, texture, spriteRect, 1, 0)
+    Animation(name, texture, spriteRect, 1, 1)
     {
         m_spriteRect = spriteRect;
     }
@@ -79,6 +79,13 @@ public:
         } else {
             m_spriteRect.x = spriteIndex * m_spriteRect.w + m_animationRect.x;
         }
+    }
+
+    /**
+     * @brief Resets the animation to the first frame.
+     */
+    void reset() {
+        m_currentFrame = 0;
     }
 
     /**

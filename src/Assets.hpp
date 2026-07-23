@@ -85,7 +85,6 @@ public:
      * @brief Retrieves a cached animation by ID.
      * @param animationName Animation identifier.
      * @return Reference to the Animation object.
-     * @throw std::out_of_range if animation not found.
      */
     const Animation&    getAnimation(const std::string &animationName) const;
 
