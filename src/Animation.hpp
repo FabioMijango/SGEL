@@ -82,6 +82,13 @@ public:
     }
 
     /**
+     * @brief Resets the animation to the first frame.
+     */
+    void reset() {
+        m_currentFrame = 0;
+    }
+
+    /**
      * @brief Checks if the animation cycle has completed.
      * @return true if current frame exceeds frame count, false otherwise.
      */
