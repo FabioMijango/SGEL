@@ -13,8 +13,8 @@ namespace sPhysics {
         SDL_FRect boundingBox = {
             transform.position.x + collider.offset.x,
             transform.position.y + collider.offset.y,
-            collider.width * transform.scale.x,
-            collider.height * transform.scale.y
+            collider.size.x * transform.scale.x,
+            collider.size.y * transform.scale.y
         };
         return boundingBox;
     }
