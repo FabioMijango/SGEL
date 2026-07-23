@@ -44,9 +44,11 @@ public:
      * @param windowSize Window dimensions in pixels.
      * @param fpsLimit Frame rate limit in FPS.
      * @param initialScene Initial scene to load.
+     * @param windowTitle Title for the application window.
+     * @param windowFlags Flags for configuring the application window.
      * @return SDL_APP_CONTINUE on success, SDL_APP_FAILURE on error.
      */
-    SDL_AppResult   init(const SDL_Point &windowSize, Uint32 fpsLimit, const std::shared_ptr<Scene>& initialScene);
+    SDL_AppResult   init(const SDL_Point &windowSize, Uint32 fpsLimit, const std::shared_ptr<Scene>& initialScene, const std::string& windowTitle= "SGEL App", SDL_WindowFlags windowFlags = SDL_WINDOW_RESIZABLE);
 
     /**
      * @brief Updates the engine, scene, and frame timing.
