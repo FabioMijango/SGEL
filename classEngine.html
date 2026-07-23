@@ -127,8 +127,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classEngine.ht
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4d5ec2c40a48635f42f34f23d499d1ef" id="r_a4d5ec2c40a48635f42f34f23d499d1ef"><td class="memItemLeft">SDL_AppResult&#160;</td><td class="memItemRight"><a class="el" href="#a4d5ec2c40a48635f42f34f23d499d1ef">init</a> (const SDL_Point &amp;windowSize, Uint32 fpsLimit, const std::shared_ptr&lt; <a class="el" href="classScene.html">Scene</a> &gt; &amp;initialScene)</td></tr>
-<tr class="memdesc:a4d5ec2c40a48635f42f34f23d499d1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the engine with window and scene.  <br /></td></tr>
+<tr class="memitem:af28bc0547b530f9d485aebf420a37d4b" id="r_af28bc0547b530f9d485aebf420a37d4b"><td class="memItemLeft">SDL_AppResult&#160;</td><td class="memItemRight"><a class="el" href="#af28bc0547b530f9d485aebf420a37d4b">init</a> (const SDL_Point &amp;windowSize, Uint32 fpsLimit, const std::shared_ptr&lt; <a class="el" href="classScene.html">Scene</a> &gt; &amp;initialScene, const std::string &amp;windowTitle=&quot;SGEL App&quot;, SDL_WindowFlags windowFlags=SDL_WINDOW_RESIZABLE)</td></tr>
+<tr class="memdesc:af28bc0547b530f9d485aebf420a37d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the engine with window and scene.  <br /></td></tr>
 <tr class="memitem:a7f6c8fafe2b381d30021cc095d99d09a" id="r_a7f6c8fafe2b381d30021cc095d99d09a"><td class="memItemLeft">SDL_AppResult&#160;</td><td class="memItemRight"><a class="el" href="#a7f6c8fafe2b381d30021cc095d99d09a">update</a> ()</td></tr>
 <tr class="memdesc:a7f6c8fafe2b381d30021cc095d99d09a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the engine, scene, and frame timing.  <br /></td></tr>
 <tr class="memitem:a49670d409dd80eee3e63f7c0fd62d1b4" id="r_a49670d409dd80eee3e63f7c0fd62d1b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a49670d409dd80eee3e63f7c0fd62d1b4">sRender</a> () const</td></tr>
@@ -152,8 +152,8 @@ Friends</h2></td></tr>
 <p>Singleton pattern. Handles window creation, rendering, frame rate management, and scene updates. Coordinates all engine subsystems including assets and input.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classScene.html" title="Abstract base class for game scenes.">Scene</a>, <a class="el" href="classAssets.html" title="Manages game assets including textures and animations.">Assets</a> </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a4d5ec2c40a48635f42f34f23d499d1ef" name="a4d5ec2c40a48635f42f34f23d499d1ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d5ec2c40a48635f42f34f23d499d1ef">&#9670;&#160;</a></span>init()</h2>
+<a id="af28bc0547b530f9d485aebf420a37d4b" name="af28bc0547b530f9d485aebf420a37d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af28bc0547b530f9d485aebf420a37d4b">&#9670;&#160;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +171,17 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classScene.html">Scene</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>initialScene</em></span>&#160;)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classScene.html">Scene</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>initialScene</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>windowTitle</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;SGEL&#160;App&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_WindowFlags</td>          <td class="paramname"><span class="paramname"><em>windowFlags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">SDL_WINDOW_RESIZABLE</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -182,6 +192,8 @@ Friends</h2></td></tr>
     <tr><td class="paramname">windowSize</td><td>Window dimensions in pixels. </td></tr>
     <tr><td class="paramname">fpsLimit</td><td>Frame rate limit in FPS. </td></tr>
     <tr><td class="paramname">initialScene</td><td>Initial scene to load. </td></tr>
+    <tr><td class="paramname">windowTitle</td><td>Title for the application window. </td></tr>
+    <tr><td class="paramname">windowFlags</td><td>Flags for configuring the application window. </td></tr>
   </table>
   </dd>
 </dl>

@@ -6,5 +6,6 @@ var classAnimation =
     [ "getSprite", "classAnimation.html#abeea575ca4a5942d34587e2c2223a5a1", null ],
     [ "getTexture", "classAnimation.html#a4de013f3b68f5209e848b64e3b79e4ba", null ],
     [ "hasEnded", "classAnimation.html#a331c96b32dbb3feaab22e32029848b71", null ],
+    [ "reset", "classAnimation.html#a903eb4b61b8c7bc72bbedbdba4cbb501", null ],
     [ "update", "classAnimation.html#a4318baf0b0735e7da87b2c6d3d3a2705", null ]
 ];

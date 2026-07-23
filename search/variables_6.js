@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['position_0',['position',['../structTransformComponent.html#a75b045b5f92f3830e36c66839427f262',1,'TransformComponent::position'],['../structCameraComponent.html#a03607a8dd57998d7c5115d9883bb26c9',1,'CameraComponent::position']]]
+  ['scale_0',['scale',['../structTransformComponent.html#a63180cf6df8383e00e7ff2c74755fa68',1,'TransformComponent']]],
+  ['size_1',['size',['../structBoxColliderComponent.html#a8bab294c357b826129107fc41093ef49',1,'BoxColliderComponent']]],
+  ['state_2',['state',['../structAction.html#a2d37d5f19427c816427500d0669c4003',1,'Action']]]
 ];

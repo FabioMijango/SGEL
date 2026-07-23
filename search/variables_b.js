@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../structAction.html#adda1e065dda853137ba0b6ac1e06be75',1,'Action::x'],['../structCellCoord.html#ac2d62f675cdda4f87c9b11436e96f923',1,'CellCoord::x']]]
+  ['zoom_0',['zoom',['../structCameraComponent.html#a4eb1888f21f86a7ab3f33c5529093b32',1,'CameraComponent']]]
 ];

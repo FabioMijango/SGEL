@@ -19,6 +19,7 @@ var hierarchy =
     [ "Scene", "classScene.html", null ],
     [ "SpatialGrid", "classSpatialGrid.html", null ],
     [ "Sprite", "classSprite.html", null ],
+    [ "TagComponent", "structTagComponent.html", null ],
     [ "TimeComponent", "structTimeComponent.html", null ],
     [ "TransformComponent", "structTransformComponent.html", null ]
 ];

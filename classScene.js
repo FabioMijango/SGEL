@@ -8,7 +8,7 @@ var classScene =
     [ "exit", "classScene.html#a7eb01eaa28fca5c14e22fbc1a03a12de", null ],
     [ "getActionMap", "classScene.html#a201c6f29c57f78a6af5addb9fa779306", null ],
     [ "hasEnded", "classScene.html#ac6421c6df8dba50d02fdaf37538dfebf", null ],
-    [ "init", "classScene.html#ac3721d8623a3d272ca69619fe914b522", null ],
+    [ "init", "classScene.html#afc9b54e6d8503f514c15206ccbb4a544", null ],
     [ "registerAction", "classScene.html#a25342f544c522ce6926648922fd390c2", null ],
     [ "registerAction", "classScene.html#af3085eee4e68a3b5809509a75eb432fd", null ],
     [ "registerAction", "classScene.html#abbc3f2c99f092bfe13724d54ed86eff2", null ],

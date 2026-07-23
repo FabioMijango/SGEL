@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classScene.htm
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a93ccc41b0a2f6c24e467d5d9de76ec0d" id="r_a93ccc41b0a2f6c24e467d5d9de76ec0d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a93ccc41b0a2f6c24e467d5d9de76ec0d">Scene</a> ()=default</td></tr>
 <tr class="memitem:af6e09d91ebd10ae9cc7c12c39d06386c" id="r_af6e09d91ebd10ae9cc7c12c39d06386c"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#af6e09d91ebd10ae9cc7c12c39d06386c">~Scene</a> ()=default</td></tr>
-<tr class="memitem:ac3721d8623a3d272ca69619fe914b522" id="r_ac3721d8623a3d272ca69619fe914b522"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ac3721d8623a3d272ca69619fe914b522">init</a> ()=0</td></tr>
-<tr class="memdesc:ac3721d8623a3d272ca69619fe914b522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the scene.  <br /></td></tr>
+<tr class="memitem:afc9b54e6d8503f514c15206ccbb4a544" id="r_afc9b54e6d8503f514c15206ccbb4a544"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#afc9b54e6d8503f514c15206ccbb4a544">init</a> (void **screenData)=0</td></tr>
+<tr class="memdesc:afc9b54e6d8503f514c15206ccbb4a544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the scene.  <br /></td></tr>
 <tr class="memitem:a092fc049175f1458128e6f743afbc437" id="r_a092fc049175f1458128e6f743afbc437"><td class="memItemLeft">virtual SDL_AppResult&#160;</td><td class="memItemRight"><a class="el" href="#a092fc049175f1458128e6f743afbc437">update</a> (float deltaTime)=0</td></tr>
 <tr class="memdesc:a092fc049175f1458128e6f743afbc437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates scene logic each frame.  <br /></td></tr>
 <tr class="memitem:a17dbf35f2790c87751206e70e7db3f92" id="r_a17dbf35f2790c87751206e70e7db3f92"><td class="memItemLeft">virtual SDL_AppResult&#160;</td><td class="memItemRight"><a class="el" href="#a17dbf35f2790c87751206e70e7db3f92">eventHandler</a> (const SDL_Event *event)</td></tr>
@@ -395,8 +395,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac3721d8623a3d272ca69619fe914b522" name="ac3721d8623a3d272ca69619fe914b522"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3721d8623a3d272ca69619fe914b522">&#9670;&#160;</a></span>init()</h2>
+<a id="afc9b54e6d8503f514c15206ccbb4a544" name="afc9b54e6d8503f514c15206ccbb4a544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc9b54e6d8503f514c15206ccbb4a544">&#9670;&#160;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,7 +407,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual bool Scene::init </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">void **</td>          <td class="paramname"><span class="paramname"><em>screenData</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -419,7 +419,14 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initializes the scene. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenData</td><td>Optional pointer for passing screen-related data. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>true if initialization successful, false otherwise. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If screenData isn't needed, use null; </dd></dl>
 
 </div>
 </div>

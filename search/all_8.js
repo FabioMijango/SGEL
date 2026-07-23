@@ -11,7 +11,9 @@ var searchData=
   ['clone_20the_20repository_20into_20the_20library_20folder_20for_20your_20project_8',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]],
   ['cmake_20recommended_9',['Using CMake (Recommended)',['../index.html#autotoc_md5',1,'']]],
   ['code_10',['code',['../structInputKey.html#adb2d9d2e148d00fd17e2a8e502fe6d6f',1,'InputKey']]],
-  ['compile_20the_20library_11',['2. Compile the Library',['../index.html#autotoc_md10',1,'']]],
-  ['componentconcept_12',['ComponentConcept',['../conceptComponentConcept.html',1,'']]],
-  ['createentity_13',['createEntity',['../classEntityManager.html#ac7482168f0df8b2ff2570435f67b3fb0',1,'EntityManager']]]
+  ['collisionlayer_11',['collisionLayer',['../structBoxColliderComponent.html#a1d072463b9b4a66f5eb0961dded14066',1,'BoxColliderComponent']]],
+  ['collisionmask_12',['collisionMask',['../structBoxColliderComponent.html#a1c5630d36d60497769c00c811ae1086d',1,'BoxColliderComponent']]],
+  ['compile_20the_20library_13',['2. Compile the Library',['../index.html#autotoc_md10',1,'']]],
+  ['componentconcept_14',['ComponentConcept',['../conceptComponentConcept.html',1,'']]],
+  ['createentity_15',['createEntity',['../classEntityManager.html#ac7482168f0df8b2ff2570435f67b3fb0',1,'EntityManager']]]
 ];

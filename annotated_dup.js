@@ -18,6 +18,7 @@ var annotated_dup =
     [ "SparseSet", "classSparseSet.html", "classSparseSet" ],
     [ "SpatialGrid", "classSpatialGrid.html", "classSpatialGrid" ],
     [ "Sprite", "classSprite.html", "classSprite" ],
+    [ "TagComponent", "structTagComponent.html", "structTagComponent" ],
     [ "TimeComponent", "structTimeComponent.html", "structTimeComponent" ],
     [ "TransformComponent", "structTransformComponent.html", "structTransformComponent" ]
 ];

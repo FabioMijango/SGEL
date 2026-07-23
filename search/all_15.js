@@ -8,5 +8,6 @@ var searchData=
   ['removecomponent_5',['removeComponent',['../classEntityManager.html#a8b285b23bb186bf24cbe9a51a29f2113',1,'EntityManager::removeComponent()'],['../classISparseSet.html#afcd5a07a0b4966e1a9a6db57d30f1473',1,'ISparseSet::removeComponent()'],['../classSparseSet.html#ae6cdf41563ef3804f066652f801cb7ad',1,'SparseSet::removeComponent()']]],
   ['repository_20into_20the_20library_20folder_20for_20your_20project_6',['1. Clone the Repository into the library folder for your project',['../index.html#autotoc_md9',1,'']]],
   ['requirements_7',['Requirements',['../index.html#autotoc_md2',1,'']]],
-  ['roadmap_8',['Roadmap',['../index.html#autotoc_md19',1,'']]]
+  ['reset_8',['reset',['../classAnimation.html#a903eb4b61b8c7bc72bbedbdba4cbb501',1,'Animation']]],
+  ['roadmap_9',['Roadmap',['../index.html#autotoc_md19',1,'']]]
 ];

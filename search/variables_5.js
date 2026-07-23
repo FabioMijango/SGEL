@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['offset_0',['offset',['../structBoxColliderComponent.html#aef8c7434a23cd11d769263b9e97785dc',1,'BoxColliderComponent']]]
+  ['position_0',['position',['../structTransformComponent.html#a75b045b5f92f3830e36c66839427f262',1,'TransformComponent::position'],['../structCameraComponent.html#a03607a8dd57998d7c5115d9883bb26c9',1,'CameraComponent::position']]]
 ];
