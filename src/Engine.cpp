@@ -33,6 +33,28 @@ SDL_AppResult Engine::init(const SDL_Point& windowSize, const Uint32 fpsLimit, c
     return SDL_APP_CONTINUE;
 }
 
+SDL_AppResult Engine::setWindowIcon(const std::string &iconPath) {
+    auto* stream = SDL_IOFromFile(iconPath.c_str(), "r");
+    if (!stream) {
+        SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error", "Failed to load icon file", nullptr);
+        return SDL_APP_FAILURE;
+    }
+
+    auto* surface = IMG_LoadPNG_IO(stream);
+    if (!surface) {
+        SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error", "Failed to load icon surface", nullptr);
+        SDL_CloseIO(stream);
+        return SDL_APP_FAILURE;
+    }
+
+    SDL_SetWindowIcon(m_window, surface);
+
+    SDL_CloseIO(stream);
+    SDL_DestroySurface(surface);
+
+    return SDL_APP_CONTINUE;
+}
+
 SDL_AppResult Engine::update() {
     if (m_scene->hasEnded()) {
         m_scene->exit();

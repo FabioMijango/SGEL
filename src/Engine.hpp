@@ -51,6 +51,13 @@ public:
     SDL_AppResult   init(const SDL_Point &windowSize, Uint32 fpsLimit, const std::shared_ptr<Scene>& initialScene, const std::string& windowTitle= "SGEL App", SDL_WindowFlags windowFlags = SDL_WINDOW_RESIZABLE);
 
     /**
+     * @brief Sets the window icon from a file path.
+     * @param iconPath Path to the icon file.
+     * @return SDL_APP_CONTINUE on success, SDL_APP_FAILURE on error.
+     */
+    SDL_AppResult   setWindowIcon(const std::string& iconPath);
+
+    /**
      * @brief Updates the engine, scene, and frame timing.
      * @return SDL_APP_CONTINUE to continue, SDL_APP_FAILURE to quit.
      */
