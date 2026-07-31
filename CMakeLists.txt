@@ -4,6 +4,10 @@ project(SGEL VERSION 1.0)
 option(BUILD_SHARED_LIBS "Build SGEL as a shared library" OFF)
 option(SGEL_BUILD_EXAMPLES "Build SGEL example projects" OFF)
 
+if(UNIX AND NOT APPLE)
+  add_compile_definitions(HAVE_GETRESUID=1 HAVE_GETRESGID=1)
+endif()
+
 include(FetchContent)
 
 FetchContent_Declare(
@@ -47,5 +51,5 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 if(SGEL_BUILD_EXAMPLES)
-    add_subdirectory(example)
+  add_subdirectory(example)
 endif()
