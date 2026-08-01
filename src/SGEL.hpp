@@ -13,5 +13,6 @@
 #include "EntityManager.hpp"
 #include "PhysicsUtils.hpp"
 #include "Scene.hpp"
+#include "SpatialGrid.hpp"
 #include "Sprite.hpp"
 #include "Types.hpp"
