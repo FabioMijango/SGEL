@@ -1,8 +1,16 @@
 cmake_minimum_required(VERSION 4.2)
 project(SGEL VERSION 1.0)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(BUILD_SHARED_LIBS "Build SGEL as a shared library" OFF)
 option(SGEL_BUILD_EXAMPLES "Build SGEL example projects" OFF)
+
+if(UNIX AND NOT APPLE)
+  add_compile_definitions(HAVE_GETRESUID=1 HAVE_GETRESGID=1)
+endif()
 
 include(FetchContent)
 
@@ -47,5 +55,5 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 if(SGEL_BUILD_EXAMPLES)
-    add_subdirectory(example)
+  add_subdirectory(example)
 endif()

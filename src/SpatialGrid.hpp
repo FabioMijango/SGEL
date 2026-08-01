@@ -72,6 +72,8 @@ public:
      */
     VectPairEntity          getPotentialCollisions() const;
 
+    VectPairEntity          getPotentialCollisionsBetweenTags() const;
+
     /**
      * @brief Retrieves a list of entities that are within the camera's view rectangle.
      * @param camera Reference of the camera component
