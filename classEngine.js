@@ -1,6 +1,7 @@
 var classEngine =
 [
     [ "init", "classEngine.html#af28bc0547b530f9d485aebf420a37d4b", null ],
+    [ "setWindowIcon", "classEngine.html#a56882349364a36a7a33850b81bb704ba", null ],
     [ "sQuit", "classEngine.html#ad20ea1662b77a9071916a4540830f120", null ],
     [ "sRender", "classEngine.html#a49670d409dd80eee3e63f7c0fd62d1b4", null ],
     [ "sUserInput", "classEngine.html#a9319584dfe318fe28b2abc144a15afd6", null ],

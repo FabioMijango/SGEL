@@ -129,6 +129,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classEngine.ht
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af28bc0547b530f9d485aebf420a37d4b" id="r_af28bc0547b530f9d485aebf420a37d4b"><td class="memItemLeft">SDL_AppResult&#160;</td><td class="memItemRight"><a class="el" href="#af28bc0547b530f9d485aebf420a37d4b">init</a> (const SDL_Point &amp;windowSize, Uint32 fpsLimit, const std::shared_ptr&lt; <a class="el" href="classScene.html">Scene</a> &gt; &amp;initialScene, const std::string &amp;windowTitle=&quot;SGEL App&quot;, SDL_WindowFlags windowFlags=SDL_WINDOW_RESIZABLE)</td></tr>
 <tr class="memdesc:af28bc0547b530f9d485aebf420a37d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the engine with window and scene.  <br /></td></tr>
+<tr class="memitem:a56882349364a36a7a33850b81bb704ba" id="r_a56882349364a36a7a33850b81bb704ba"><td class="memItemLeft">SDL_AppResult&#160;</td><td class="memItemRight"><a class="el" href="#a56882349364a36a7a33850b81bb704ba">setWindowIcon</a> (const std::string &amp;iconPath)</td></tr>
+<tr class="memdesc:a56882349364a36a7a33850b81bb704ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the window icon from a file path.  <br /></td></tr>
 <tr class="memitem:a7f6c8fafe2b381d30021cc095d99d09a" id="r_a7f6c8fafe2b381d30021cc095d99d09a"><td class="memItemLeft">SDL_AppResult&#160;</td><td class="memItemRight"><a class="el" href="#a7f6c8fafe2b381d30021cc095d99d09a">update</a> ()</td></tr>
 <tr class="memdesc:a7f6c8fafe2b381d30021cc095d99d09a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the engine, scene, and frame timing.  <br /></td></tr>
 <tr class="memitem:a49670d409dd80eee3e63f7c0fd62d1b4" id="r_a49670d409dd80eee3e63f7c0fd62d1b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a49670d409dd80eee3e63f7c0fd62d1b4">sRender</a> () const</td></tr>
@@ -226,6 +228,32 @@ Friends</h2></td></tr>
 
 <p>Gets the singleton instance of the <a class="el" href="classEngine.html" title="Main engine class managing SDL systems, scenes, and the main game loop.">Engine</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the <a class="el" href="classEngine.html" title="Main engine class managing SDL systems, scenes, and the main game loop.">Engine</a> singleton. </dd></dl>
+
+</div>
+</div>
+<a id="a56882349364a36a7a33850b81bb704ba" name="a56882349364a36a7a33850b81bb704ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56882349364a36a7a33850b81bb704ba">&#9670;&#160;</a></span>setWindowIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_AppResult Engine::setWindowIcon </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>iconPath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the window icon from a file path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iconPath</td><td>Path to the icon file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SDL_APP_CONTINUE on success, SDL_APP_FAILURE on error. </dd></dl>
 
 </div>
 </div>

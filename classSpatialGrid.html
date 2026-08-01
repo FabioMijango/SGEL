@@ -138,6 +138,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa13e7827f550d07dd5a036d4a6456e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a list of potential collision pairs from the spatial grid. This method returns pairs of entities that are in proximity and may potentially collide.  <br /></td></tr>
 <tr class="memitem:a24d6e94d46a9cb0f38b0ea2693a45568" id="r_a24d6e94d46a9cb0f38b0ea2693a45568"><td class="memItemLeft">std::vector&lt; <a class="el" href="Types_8hpp.html#ad3dfdc50ab5559bc5c131f83e27d7d7d">Entity</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a24d6e94d46a9cb0f38b0ea2693a45568">getEntitiesInSight</a> (<a class="el" href="structCameraComponent.html">CameraComponent</a> &amp;camera) const</td></tr>
 <tr class="memdesc:a24d6e94d46a9cb0f38b0ea2693a45568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a list of entities that are within the camera's view rectangle.  <br /></td></tr>
+<tr class="memitem:a3e90e1a1ec0f5b6a69845f4ad57dd54a" id="r_a3e90e1a1ec0f5b6a69845f4ad57dd54a"><td class="memTemplParams" colspan="2">template&lt;typename TagA, typename TagB&gt; </td></tr>
+<tr class="memitem:a3e90e1a1ec0f5b6a69845f4ad57dd54a template"><td class="memItemLeft">VectPairEntity&#160;</td><td class="memItemRight"><a class="el" href="#a3e90e1a1ec0f5b6a69845f4ad57dd54a">getPotentialCollisionBetween</a> () const</td></tr>
+<tr class="memdesc:a3e90e1a1ec0f5b6a69845f4ad57dd54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a list of potential collision pairs between entities with specified component tags.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A spatial grid for broad-phase collision detection and camera culling. </p>
@@ -208,6 +211,43 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vector of entities that are within the camera's view rectangle </dd></dl>
+
+</div>
+</div>
+<a id="a3e90e1a1ec0f5b6a69845f4ad57dd54a" name="a3e90e1a1ec0f5b6a69845f4ad57dd54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e90e1a1ec0f5b6a69845f4ad57dd54a">&#9670;&#160;</a></span>getPotentialCollisionBetween()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TagA, typename TagB&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VectPairEntity SpatialGrid::getPotentialCollisionBetween </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a list of potential collision pairs between entities with specified component tags. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TagA</td><td>The component tag for the first entity type. </td></tr>
+    <tr><td class="paramname">TagB</td><td>The component tag for the second entity type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of pairs of entities that may potentially collide </dd></dl>
 
 </div>
 </div>

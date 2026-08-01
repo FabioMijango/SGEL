@@ -173,7 +173,45 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('SpatialGrid_8h
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    VectPairEntity          <a class="code hl_function" href="classSpatialGrid.html#aa13e7827f550d07dd5a036d4a6456e82">getPotentialCollisions</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::vector&lt;Entity&gt;     <a class="code hl_function" href="classSpatialGrid.html#a24d6e94d46a9cb0f38b0ea2693a45568">getEntitiesInSight</a>(<a class="code hl_struct" href="structCameraComponent.html">CameraComponent</a>&amp; camera) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TagA, <span class="keyword">typename</span> TagB&gt;</div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classSpatialGrid.html#a3e90e1a1ec0f5b6a69845f4ad57dd54a">   89</a></span>    VectPairEntity <a class="code hl_function" href="classSpatialGrid.html#a3e90e1a1ec0f5b6a69845f4ad57dd54a">getPotentialCollisionBetween</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        VectPairEntity pairs;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        std::unordered_map&lt;Uint64, bool&gt; seen;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_struct" href="structCellCoord.html">CellCoord</a> neighbors[4] = {{1, 0}, {0, 1}, {1, 1}, {-1, 1}};</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [coord, entitiesVec] : m_cells) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; entitiesVec.size(); ++i) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <span class="keywordflow">for</span> (std::size_t j = i + 1; j &lt; entitiesVec.size(); ++j) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    <a class="code hl_typedef" href="Types_8hpp.html#ad3dfdc50ab5559bc5c131f83e27d7d7d">Entity</a> ea = entitiesVec[i], eb = entitiesVec[j];</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    <span class="keywordtype">bool</span> matchAB = m_entityManager-&gt;hasComponent&lt;TagA&gt;(ea) &amp;&amp; m_entityManager-&gt;hasComponent&lt;TagB&gt;(eb);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                    <span class="keywordtype">bool</span> matchBA = m_entityManager-&gt;hasComponent&lt;TagA&gt;(eb) &amp;&amp; m_entityManager-&gt;hasComponent&lt;TagB&gt;(ea);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    <span class="keywordflow">if</span> (matchAB || matchBA)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                        addPairIfNew(pairs, seen, ea, eb);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structCellCoord.html">CellCoord</a>&amp; off : neighbors) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                <a class="code hl_struct" href="structCellCoord.html">CellCoord</a> n{coord.x + off.x, coord.y + off.y};</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                <span class="keyword">auto</span> it = m_cells.find(n);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <span class="keywordflow">if</span> (it == m_cells.end()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordflow">for</span> (<a class="code hl_typedef" href="Types_8hpp.html#ad3dfdc50ab5559bc5c131f83e27d7d7d">Entity</a> a : entitiesVec) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="Types_8hpp.html#ad3dfdc50ab5559bc5c131f83e27d7d7d">Entity</a> b : it-&gt;second) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                        <span class="keywordtype">bool</span> matchAB = m_entityManager-&gt;hasComponent&lt;TagA&gt;(a) &amp;&amp; m_entityManager-&gt;hasComponent&lt;TagB&gt;(b);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                        <span class="keywordtype">bool</span> matchBA = m_entityManager-&gt;hasComponent&lt;TagA&gt;(b) &amp;&amp; m_entityManager-&gt;hasComponent&lt;TagB&gt;(a);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                        <span class="keywordflow">if</span> (matchAB || matchBA)</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                            addPairIfNew(pairs, seen, a, b);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                    }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">return</span> pairs;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>};</div>
 </div>
 <div class="ttc" id="aCameraUtils_8hpp_html"><div class="ttname"><a href="CameraUtils_8hpp.html">CameraUtils.hpp</a></div></div>
 <div class="ttc" id="aEntityManager_8hpp_html"><div class="ttname"><a href="EntityManager_8hpp.html">EntityManager.hpp</a></div></div>
@@ -184,6 +222,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('SpatialGrid_8h
 <div class="ttc" id="aclassSpatialGrid_html_a0c74b728d2fa30f1b5574bd5391f01ac"><div class="ttname"><a href="classSpatialGrid.html#a0c74b728d2fa30f1b5574bd5391f01ac">SpatialGrid::SpatialGrid</a></div><div class="ttdeci">SpatialGrid(float cellSize, EntityManager *entityManager)</div><div class="ttdef"><b>Definition</b> SpatialGrid.cpp:20</div></div>
 <div class="ttc" id="aclassSpatialGrid_html_a24d6e94d46a9cb0f38b0ea2693a45568"><div class="ttname"><a href="classSpatialGrid.html#a24d6e94d46a9cb0f38b0ea2693a45568">SpatialGrid::getEntitiesInSight</a></div><div class="ttdeci">std::vector&lt; Entity &gt; getEntitiesInSight(CameraComponent &amp;camera) const</div><div class="ttdoc">Retrieves a list of entities that are within the camera&#39;s view rectangle.</div><div class="ttdef"><b>Definition</b> SpatialGrid.cpp:113</div></div>
 <div class="ttc" id="aclassSpatialGrid_html_a3d92fad3f5548b1dd4faa84f0f3a4e56"><div class="ttname"><a href="classSpatialGrid.html#a3d92fad3f5548b1dd4faa84f0f3a4e56">SpatialGrid::setCellSize</a></div><div class="ttdeci">void setCellSize(float cellSize)</div><div class="ttdoc">Sets the size of the cells in the spatial grid.</div><div class="ttdef"><b>Definition</b> SpatialGrid.cpp:28</div></div>
+<div class="ttc" id="aclassSpatialGrid_html_a3e90e1a1ec0f5b6a69845f4ad57dd54a"><div class="ttname"><a href="classSpatialGrid.html#a3e90e1a1ec0f5b6a69845f4ad57dd54a">SpatialGrid::getPotentialCollisionBetween</a></div><div class="ttdeci">VectPairEntity getPotentialCollisionBetween() const</div><div class="ttdoc">Retrieves a list of potential collision pairs between entities with specified component tags.</div><div class="ttdef"><b>Definition</b> SpatialGrid.hpp:89</div></div>
 <div class="ttc" id="aclassSpatialGrid_html_aa13e7827f550d07dd5a036d4a6456e82"><div class="ttname"><a href="classSpatialGrid.html#aa13e7827f550d07dd5a036d4a6456e82">SpatialGrid::getPotentialCollisions</a></div><div class="ttdeci">VectPairEntity getPotentialCollisions() const</div><div class="ttdoc">Retrieves a list of potential collision pairs from the spatial grid. This method returns pairs of ent...</div><div class="ttdef"><b>Definition</b> SpatialGrid.cpp:70</div></div>
 <div class="ttc" id="aclassSpatialGrid_html_ab848e6605b69b251aff026e815655515"><div class="ttname"><a href="classSpatialGrid.html#ab848e6605b69b251aff026e815655515">SpatialGrid::getCellSize</a></div><div class="ttdeci">float getCellSize() const</div><div class="ttdoc">Gets the size of the cells in the spatial grid.</div><div class="ttdef"><b>Definition</b> SpatialGrid.cpp:32</div></div>
 <div class="ttc" id="aclassSpatialGrid_html_acaaa9d0f3b9f15ba746eb5bdbe22ca0d"><div class="ttname"><a href="classSpatialGrid.html#acaaa9d0f3b9f15ba746eb5bdbe22ca0d">SpatialGrid::populateMap</a></div><div class="ttdeci">void populateMap()</div><div class="ttdoc">Populates the spatial grid with entities based on their positions and sizes. This method should be ca...</div><div class="ttdef"><b>Definition</b> SpatialGrid.cpp:57</div></div>
