@@ -72,12 +72,52 @@ public:
      */
     VectPairEntity          getPotentialCollisions() const;
 
-    VectPairEntity          getPotentialCollisionsBetweenTags() const;
-
     /**
      * @brief Retrieves a list of entities that are within the camera's view rectangle.
      * @param camera Reference of the camera component
      * @return Vector of entities that are within the camera's view rectangle
      */
     std::vector<Entity>     getEntitiesInSight(CameraComponent& camera) const;
+
+    /**
+     * @brief Retrieves a list of potential collision pairs between entities with specified component tags.
+     * @tparam TagA The component tag for the first entity type.
+     * @tparam TagB The component tag for the second entity type.
+     * @return Vector of pairs of entities that may potentially collide
+     */
+    template<typename TagA, typename TagB>
+    VectPairEntity getPotentialCollisionBetween() const {
+        VectPairEntity pairs;
+        std::unordered_map<Uint64, bool> seen;
+        static const CellCoord neighbors[4] = {{1, 0}, {0, 1}, {1, 1}, {-1, 1}};
+
+        for (auto& [coord, entitiesVec] : m_cells) {
+            for (std::size_t i = 0; i < entitiesVec.size(); ++i) {
+                for (std::size_t j = i + 1; j < entitiesVec.size(); ++j) {
+                    Entity ea = entitiesVec[i], eb = entitiesVec[j];
+                    bool matchAB = m_entityManager->hasComponent<TagA>(ea) && m_entityManager->hasComponent<TagB>(eb);
+                    bool matchBA = m_entityManager->hasComponent<TagA>(eb) && m_entityManager->hasComponent<TagB>(ea);
+                    if (matchAB || matchBA)
+                        addPairIfNew(pairs, seen, ea, eb);
+                }
+            }
+
+            for (const CellCoord& off : neighbors) {
+                CellCoord n{coord.x + off.x, coord.y + off.y};
+                auto it = m_cells.find(n);
+                if (it == m_cells.end()) continue;
+
+                for (Entity a : entitiesVec) {
+                    for (Entity b : it->second) {
+                        bool matchAB = m_entityManager->hasComponent<TagA>(a) && m_entityManager->hasComponent<TagB>(b);
+                        bool matchBA = m_entityManager->hasComponent<TagA>(b) && m_entityManager->hasComponent<TagB>(a);
+                        if (matchAB || matchBA)
+                            addPairIfNew(pairs, seen, a, b);
+                    }
+                }
+            }
+        }
+
+        return pairs;
+    }
 };
