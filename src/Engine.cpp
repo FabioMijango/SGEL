@@ -58,10 +58,7 @@ SDL_AppResult Engine::setWindowIcon(const std::string &iconPath) {
 SDL_AppResult Engine::update() {
     if (m_scene->hasEnded()) {
         m_scene->exit();
-
         m_scene = m_scene->changeScene();
-        m_scene->init(nullptr);
-        return SDL_APP_CONTINUE;
     }
     SDL_AppResult result = m_scene->update(m_deltaTime);
     for (auto& animation: Assets::Instance().m_animationMap | std::views::values) {
